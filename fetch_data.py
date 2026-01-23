@@ -5,6 +5,7 @@ import time
 
 # List of commands provided by the user
 commands_text = """
+docker run -d --cap-add=NET_ADMIN -p 5354:53/udp -p 9025:80 --name Flag-red46 --restart always joshbeck2024/ctf-dns-firewall-bypass-flag-red46
 docker run -d -p 9024:80 --name Flag-red45 joshbeck2024/ctf-roundcube-1.2.0-flag-red45
 docker run -d -p 9023:80 --name Flag-red44 --restart always joshbeck2024/ctf-php-type-juggling-flag-red44
 docker run -d -p 9021:80 -p 9022:22 --network flag-red25-net --cap-add=NET_ADMIN --restart always --name Flag_red25 joshbeck2024/ctf-403-bypass-flag-red25
