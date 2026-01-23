@@ -11,32 +11,36 @@ The website is built using:
 
 ## Prerequisites
 
-- **Docker**: You need Docker installed on your machine to build and run the container.
-- **Git**: To clone this repository.
+- **Docker**: You need Docker installed on your machine.
+- **Git**: To clone this repository (optional if just running the container).
 
 ## Docker Instructions
 
-The website is fully containerized. You can build and run it locally using the following commands.
+### 1. Quick Start (Recommended)
 
-### 1. Build the Docker Image
+To run the website immediately using the pre-built image from Docker Hub, run:
 
-Navigate to the root of the repository (where this README is located) and run:
+```bash
+docker run -d --restart always -p 80:80 --name cyberlessons101-website joshbeck2024/cyberlessons101-website
+```
+
+Access the website at: `http://localhost`
+
+### 2. Build Locally (Optional)
+
+If you prefer to build the image from the source code:
+
+**Navigate to the root of the repository:**
 
 ```bash
 docker build -t cyberlessons101-website ./web
 ```
 
-*Note: The `Dockerfile` is located in the `./web` directory, so we specify the build context as `./web`.*
-
-### 2. Run the Container
-
-Once built, you can run the container on port 80:
+**Run your locally built container:**
 
 ```bash
 docker run -d --restart always -p 80:80 --name cyberlessons101-website cyberlessons101-website
 ```
-
-Access the website at: `http://localhost`
 
 ### 3. Stop and Remove
 
