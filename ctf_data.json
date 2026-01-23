@@ -1,0 +1,253 @@
+[
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9000:80 --restart always --name flag-b joshbeck2024/ctf-simple-rev-shell",
+    "name": "flag-b",
+    "image": "joshbeck2024/ctf-simple-rev-shell",
+    "ports": [
+      "9000:80"
+    ],
+    "description": "CTF: Can you pop a basic reverse shell and find the flag?",
+    "full_description": "docker run -d --restart always -p 9000:80 --name simple-rev-shell joshbeck2024/ctf-simple-rev-shell\n\nSolution Guide: https://humble-raptor-f30.notion.site/b-Simple_Reverse_Shell-6f51624c2ff148a59de742eef9d50b64?source=copy_link\n\n\n",
+    "solution_url": "https://humble-raptor-f30.notion.site/b-Simple_Reverse_Shell-6f51624c2ff148a59de742eef9d50b64?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-simple-rev-shell"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9001:80 --restart always --name ctf-mime-challenge-flag-n joshbeck2024/ctf-rev-shell-mime-flag-n",
+    "name": "ctf-mime-challenge-flag-n",
+    "image": "joshbeck2024/ctf-rev-shell-mime-flag-n",
+    "ports": [
+      "9001:80"
+    ],
+    "description": "CTF: Can you bypass the MIME type check to pop a reverse shell",
+    "full_description": "docker run -d -p 9001:80 --restart always --name ctf-mime-challenge-flag-n joshbeck2024/ctf-rev-shell-mime-flag-n\n\nSolution Guide: https://humble-raptor-f30.notion.site/n-Reverse-Shell-Signature-Bypass-87ae1e9a382a4388a930d1b5c71b1594?source=copy_link",
+    "solution_url": "https://humble-raptor-f30.notion.site/n-Reverse-Shell-Signature-Bypass-87ae1e9a382a4388a930d1b5c71b1594?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-rev-shell-mime-flag-n"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9002:80 --restart always --name ctf-base64 joshbeck2024/ctf-base64-rev-shell-flag-k",
+    "name": "ctf-base64",
+    "image": "joshbeck2024/ctf-base64-rev-shell-flag-k",
+    "ports": [
+      "9002:80"
+    ],
+    "description": "CTF Activity: Can you encode a reverse shell using Base64?",
+    "full_description": "docker run -d -p 9002:80 --restart always --name ctf-base64 joshbeck2024/ctf-base64-rev-shell-flag-k\n\nSolution Guide: https://humble-raptor-f30.notion.site/k-Base64-Shel-28dbe874a57d43e2b0753a2782e445a5?source=copy_link\n",
+    "solution_url": "https://humble-raptor-f30.notion.site/k-Base64-Shel-28dbe874a57d43e2b0753a2782e445a5?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-base64-rev-shell-flag-k"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9003:80 --restart always --name ctf-mod-cgi joshbeck2024/ctf-mod-cgi-shell-flag-d",
+    "name": "ctf-mod-cgi",
+    "image": "joshbeck2024/ctf-mod-cgi-shell-flag-d",
+    "ports": [
+      "9003:80"
+    ],
+    "description": "CTF: Can you pop a reverse shell?",
+    "full_description": "docker run -d -p 9003:80 --restart always --name ctf-mod-cgi joshbeck2024/ctf-mod-cgi-shell-flag-d\n\nSolution Guide: https://humble-raptor-f30.notion.site/d-Reverse-Shell-CGI-74351da8b5464b45b7a9c868b7d81438?source=copy_link\n",
+    "solution_url": "https://humble-raptor-f30.notion.site/d-Reverse-Shell-CGI-74351da8b5464b45b7a9c868b7d81438?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-mod-cgi-shell-flag-d"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9004:5000 --name flag_j --restart always joshbeck2024/ctf-flask-ssti-flag-j",
+    "name": "flag_j",
+    "image": "joshbeck2024/ctf-flask-ssti-flag-j",
+    "ports": [
+      "9004:5000"
+    ],
+    "description": "CTF: Can you exploit this using Server Side Template Injection",
+    "full_description": "docker run -d -p 9004:5000 --name flag_j --restart always joshbeck2024/ctf-flask-ssti-flag-j\n\nSolution Guide: https://humble-raptor-f30.notion.site/j-Flask-ac1930adb19643df80dfeb3174c04eca?source=copy_link\n\n",
+    "solution_url": "https://humble-raptor-f30.notion.site/j-Flask-ac1930adb19643df80dfeb3174c04eca?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-flask-ssti-flag-j"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9005:80 --restart always --name burp_ctf joshbeck2024/ctf-burp-suite-basic-training",
+    "name": "burp_ctf",
+    "image": "joshbeck2024/ctf-burp-suite-basic-training",
+    "ports": [
+      "9005:80"
+    ],
+    "description": "CTF: Can you use Burp to uncover the flags?",
+    "full_description": "docker run -d -p 9005:80 --restart always --name burp_ctf joshbeck2024/ctf-burp-suite-basic-training\n\nSolution Guide Activity 1:\nhttps://humble-raptor-f30.notion.site/Red1-Burp-User-Agent-0e6eb79ace764e6e90c76ce8f4253507?source=copy_link\n\nSolution Guide Activity 2:\nhttps://humble-raptor-f30.notion.site/Red2-Burp-Cookies-89e8a30d574d4167a691f32ea5536fbb?source=copy_link\n\nSolution Guide Activity 3:\nhttps://humble-raptor-f30.notion.site/Red3-BurpSuite-Brute-Force-10a1cc9f7ccc4b25a484383b432a96a0?source=copy_link",
+    "solution_url": null,
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-burp-suite-basic-training"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9006:80 --name flag5 --restart always joshbeck2024/ctf-sql-inject-flag-5",
+    "name": "flag5",
+    "image": "joshbeck2024/ctf-sql-inject-flag-5",
+    "ports": [
+      "9006:80"
+    ],
+    "description": "CTF Activity: Simple SQL Injection",
+    "full_description": "docker run -d -p 9006:80 --name flag5 --restart always joshbeck2024/ctf-sql-inject-flag-5\n\nSolution Guide: https://humble-raptor-f30.notion.site/SQL-Inject-Flag_5-f6dbc00fc4aa4197834d7de871b52d8c?source=copy_link",
+    "solution_url": "https://humble-raptor-f30.notion.site/SQL-Inject-Flag_5-f6dbc00fc4aa4197834d7de871b52d8c?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-sql-inject-flag-5"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d --name ctf-flag-7 --restart always -p 9007:80 joshbeck2024/ctf-phar-out-flag-7",
+    "name": "ctf-flag-7",
+    "image": "joshbeck2024/ctf-phar-out-flag-7",
+    "ports": [
+      "9007:80"
+    ],
+    "description": "CTF Activity: Can  you craft a malicious phar file",
+    "full_description": "docker run -d --name ctf-flag-7 --restart always -p 9007:80 joshbeck2024/ctf-phar-out-flag-7\n\nSolution Guide: https://humble-raptor-f30.notion.site/7-Phar_Out-78b94deb3f134d578eef7da6a2f6d5d3?source=copy_link\n",
+    "solution_url": "https://humble-raptor-f30.notion.site/7-Phar_Out-78b94deb3f134d578eef7da6a2f6d5d3?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-phar-out-flag-7"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9008:80 --restart always --name flag8 joshbeck2024/ctf-git-dumper-training-flag-8",
+    "name": "flag8",
+    "image": "joshbeck2024/ctf-git-dumper-training-flag-8",
+    "ports": [
+      "9008:80"
+    ],
+    "description": "CTF: Git Dumper Training. Solution Guide Included",
+    "full_description": "docker run -d -p 9008:80 --restart always --name flag8 joshbeck2024/ctf-git-dumper-training-flag-8\n\nSolution Guide: https://humble-raptor-f30.notion.site/Lab_04_Finding_Git_Projects-43057cf13488447981e6d06918601343?source=copy_link\n\n\n",
+    "solution_url": "https://humble-raptor-f30.notion.site/Lab_04_Finding_Git_Projects-43057cf13488447981e6d06918601343?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-git-dumper-training-flag-8"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9009:80 --name ctf-flag-9 --restart always joshbeck2024/ctf-cookie-brute-force-flag-9",
+    "name": "ctf-flag-9",
+    "image": "joshbeck2024/ctf-cookie-brute-force-flag-9",
+    "ports": [
+      "9009:80"
+    ],
+    "description": "CTF: Brute force cookie values: Training",
+    "full_description": "docker run -d -p 9009:80 --name ctf-flag-9 --restart always joshbeck2024/ctf-cookie-brute-force-flag-9\n\nSolution Guide: https://humble-raptor-f30.notion.site/Lab_10-Making-Web-Requests-575d844d96224fcdba5802778b1fab2c?source=copy_link\n\n",
+    "solution_url": "https://humble-raptor-f30.notion.site/Lab_10-Making-Web-Requests-575d844d96224fcdba5802778b1fab2c?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-cookie-brute-force-flag-9"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9010:22 --network flag-e-net --cap-add=NET_ADMIN --restart always --name flag-e-container joshbeck2024/ctf-tunnel-challenge-flag-e",
+    "name": "flag-e-container",
+    "image": "joshbeck2024/ctf-tunnel-challenge-flag-e",
+    "ports": [
+      "9010:22"
+    ],
+    "description": "CTF Training: Using SSH -L to pivot. Directions included",
+    "full_description": "sudo docker run -d -p 9010:22 --network flag-e-net --cap-add=NET_ADMIN --restart always --name flag-e-container joshbeck2024/ctf-tunnel-challenge-flag-e\n\n\nSolution Guide: https://humble-raptor-f30.notion.site/e-Tunneling-with-ssh-9d2cb9af917e4edba323e5c39c620a80?source=copy_link\n",
+    "solution_url": "https://humble-raptor-f30.notion.site/e-Tunneling-with-ssh-9d2cb9af917e4edba323e5c39c620a80?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-tunnel-challenge-flag-e"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d --restart always -p 9011:53/tcp -p 9011:53/udp -p 9012:80 --name flag-f joshbeck2024/ctf-zone-transfer-flag-f",
+    "name": "flag-f",
+    "image": "joshbeck2024/ctf-zone-transfer-flag-f",
+    "ports": [
+      "9011:53/tcp",
+      "9011:53/udp",
+      "9012:80"
+    ],
+    "description": "CTF Training: dig axfr  --Directions included",
+    "full_description": "docker run -d --restart always -p 9011:53/tcp -p 9011:53/udp -p 9012:80 --name flag-f joshbeck2024/ctf-zone-transfer-flag-f\n\nSolution Guide: https://humble-raptor-f30.notion.site/f-Exploiting-DNS-f542a19d810f47b5a3f820a10b60ed0d?source=copy_link\n",
+    "solution_url": "https://humble-raptor-f30.notion.site/f-Exploiting-DNS-f542a19d810f47b5a3f820a10b60ed0d?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-zone-transfer-flag-f"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9013:80 --restart always --name flag-g joshbeck2024/ctf-base64-encoded-cookie",
+    "name": "flag-g",
+    "image": "joshbeck2024/ctf-base64-encoded-cookie",
+    "ports": [
+      "9013:80"
+    ],
+    "description": "CTF Activity: Base64 encoded cookie challenge. Directions Included.",
+    "full_description": "docker run -d -p 9013:80 --restart always --name flag-g joshbeck2024/ctf-base64-encoded-cookie\n\nSolution Guide: https://humble-raptor-f30.notion.site/g-Python-Brute-Force-c819ff0b965a489ca9ea18f6d41a0520?source=copy_link\n",
+    "solution_url": "https://humble-raptor-f30.notion.site/g-Python-Brute-Force-c819ff0b965a489ca9ea18f6d41a0520?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-base64-encoded-cookie"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9014:80 -p 9015:22 --cap-add=NET_ADMIN --name flag-h joshbeck2024/ctf-brute-force-login-flag-h",
+    "name": "flag-h",
+    "image": "joshbeck2024/ctf-brute-force-login-flag-h",
+    "ports": [
+      "9014:80",
+      "9015:22"
+    ],
+    "description": "CTF Activity: SSH Brute Force Login. Directions Included",
+    "full_description": "docker run -d -p 9014:80 -p 9015:22 --cap-add=NET_ADMIN --name flag-h joshbeck2024/ctf-brute-force-login-flag-h\n\nSolution Guide: https://humble-raptor-f30.notion.site/Enumerate-172-25-200-200-9014-Flag_H-d15325b514984b53846679991ceedea6?source=copy_link\n\n\n",
+    "solution_url": "https://humble-raptor-f30.notion.site/Enumerate-172-25-200-200-9014-Flag_H-d15325b514984b53846679991ceedea6?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-brute-force-login-flag-h"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9016:5000 --restart always --name flag-i joshbeck2024/ctf-python-post-variables-flag-i",
+    "name": "flag-i",
+    "image": "joshbeck2024/ctf-python-post-variables-flag-i",
+    "ports": [
+      "9016:5000"
+    ],
+    "description": "CTF Activity: Using python to brute force POST parameters. Directions Included.",
+    "full_description": "docker run -d -p 9016:5000 --restart always --name flag-i joshbeck2024/ctf-python-post-variables-flag-i\n\nSolution Guide: https://humble-raptor-f30.notion.site/Python-POST-Variables-FLAG_I-2f04c8e52376805b9792d9d402b8e1eb?source=copy_link\n",
+    "solution_url": "https://humble-raptor-f30.notion.site/Python-POST-Variables-FLAG_I-2f04c8e52376805b9792d9d402b8e1eb?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-python-post-variables-flag-i"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9017:80 --restart always --name flag_l_container joshbeck2024/ctf-get-post-training-flag-l",
+    "name": "flag_l_container",
+    "image": "joshbeck2024/ctf-get-post-training-flag-l",
+    "ports": [
+      "9017:80"
+    ],
+    "description": "CTF Training: Use Burp Suite to modify a GET request to a POST request. Directions Included.",
+    "full_description": "docker run -d -p 9017:80 --restart always --name flag_l_container joshbeck2024/ctf-get-post-training-flag-l\n\nSolution Guide: https://humble-raptor-f30.notion.site/L-Get-Versus-Post-7058c6a8717b4dbba10f35e490cd22d7?source=copy_link",
+    "solution_url": "https://humble-raptor-f30.notion.site/L-Get-Versus-Post-7058c6a8717b4dbba10f35e490cd22d7?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-get-post-training-flag-l"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9018:80 --restart always --name flag-o joshbeck2024/ctf-weather-api-rce-flag-o",
+    "name": "flag-o",
+    "image": "joshbeck2024/ctf-weather-api-rce-flag-o",
+    "ports": [
+      "9018:80"
+    ],
+    "description": "CTF Activity: Obtain RCE through this handy weather API webpage. Directions Included",
+    "full_description": "docker run -d -p 9018:80 --restart always --name flag-o joshbeck2024/ctf-weather-api-rce-flag-o\n\nSolution Guide: https://humble-raptor-f30.notion.site/o-Vulnerable-Code-44a61fc480c745619586fe537ff79d28?source=copy_link\n",
+    "solution_url": "https://humble-raptor-f30.notion.site/o-Vulnerable-Code-44a61fc480c745619586fe537ff79d28?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-weather-api-rce-flag-o"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9019:80 --restart always --name flag-p joshbeck2024/ctf-php-deserialization-flag-p",
+    "name": "flag-p",
+    "image": "joshbeck2024/ctf-php-deserialization-flag-p",
+    "ports": [
+      "9019:80",
+      "joshbeck2024/ctf-php-deserialization-flag-p"
+    ],
+    "description": "CTF Activity: PHP Deserialization Example. Directions Included.",
+    "full_description": "docker run -d -p 9019:80 --restart always --name flag-p joshbeck2024/ctf-php-deserialization-flag-p\n\nSolution Guide: https://humble-raptor-f30.notion.site/P-PHP_Deserialization-087d3f3fbb874c98a82fdd3eb8a9a32d?source=copy_link",
+    "solution_url": "https://humble-raptor-f30.notion.site/P-PHP_Deserialization-087d3f3fbb874c98a82fdd3eb8a9a32d?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-php-deserialization-flag-p"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9020:80 --restart always --name flag-q joshbeck2024/ctf-ssrf-hex-bypass-flag-q",
+    "name": "flag-q",
+    "image": "joshbeck2024/ctf-ssrf-hex-bypass-flag-q",
+    "ports": [
+      "9020:80"
+    ],
+    "description": "CTF: SSRF Bypass using Hexadecimal to bypass an IP filter. Directions included.",
+    "full_description": "docker run -d -p 9020:80 --restart always --name flag-q joshbeck2024/ctf-ssrf-hex-bypass-flag-q\n\nSolution Guide: https://humble-raptor-f30.notion.site/q-SSRF-Hex-064ee0d604754a00b4156fec158da600?source=copy_link\n",
+    "solution_url": "https://humble-raptor-f30.notion.site/q-SSRF-Hex-064ee0d604754a00b4156fec158da600?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-ssrf-hex-bypass-flag-q"
+  }
+]

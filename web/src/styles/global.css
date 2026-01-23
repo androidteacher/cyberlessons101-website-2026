@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cyber-darker text-cyber-text antialiased;
+  }
+}
+
+.glow-text {
+  text-shadow: 0 0 10px rgba(14, 165, 233, 0.5);
+}
+
+.cyber-card {
+  @apply bg-cyber-surface border border-slate-700/50 rounded-xl overflow-hidden transition-all duration-300;
+}
+.cyber-card:hover {
+  @apply border-cyber-primary/50 shadow-[0_0_20px_rgba(14,165,233,0.15)] -translate-y-1;
+}
+
+.btn-primary {
+  @apply bg-cyber-primary text-white font-semibold px-4 py-2 rounded-lg hover:bg-sky-400 transition-colors shadow-[0_0_15px_rgba(14,165,233,0.4)];
+}
+
+.code-block {
+  @apply bg-black/50 border border-slate-700 rounded-lg p-3 font-mono text-sm text-slate-300 flex justify-between items-center;
+}

@@ -1,0 +1,166 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ctfData from '../../data/ctf.json';
+import { titleMapping } from '../../data/titles';
+
+export function getStaticPaths() {
+  return ctfData
+    .filter(item => item.type === 'challenge')
+    .map(item => ({
+      params: { slug: item.name },
+      props: { challenge: item },
+    }));
+}
+
+const { challenge } = Astro.props;
+const { name, command, description, full_description, ports, solution_url } = challenge;
+const prettyTitle = titleMapping[name] || name.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+
+// Clean up description link if it's already in the solution_url
+const descClean = full_description.replace(/Solution Guide: https?:\/\/[^\s]+/, '').trim();
+---
+
+<Layout title={prettyTitle}>
+  <div class="max-w-4xl mx-auto">
+    <a href="/" class="inline-flex items-center text-sm text-slate-400 hover:text-white mb-8 transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+      </svg>
+      Back to Index
+    </a>
+
+    <div class="mb-10">
+      <h1 class="text-3xl md:text-5xl font-bold mb-4 text-white">
+        {prettyTitle}
+      </h1>
+      <div class="flex flex-wrap gap-4 text-sm font-mono text-cyan-400">
+        <span class="bg-cyan-950/50 px-3 py-1 rounded border border-cyan-900">
+          Port: {ports && ports[0] ? ports[0] : 'Unknown'}
+        </span>
+        <span class="bg-fuchsia-950/50 px-3 py-1 rounded border border-fuchsia-900 text-fuchsia-400">
+          Docker Image: {challenge.image}
+        </span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Main Info -->
+      <div class="lg:col-span-2 space-y-8">
+        
+        <section class="cyber-card p-6">
+          <h2 class="text-xl font-bold mb-4 text-white flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-cyber-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            Quick Deploy
+          </h2>
+          <p class="text-slate-400 mb-4 text-sm">
+            Copy and paste this command into your terminal to start the challenge.
+            <br/><span class="text-xs text-slate-500 italic">Requires Docker installed and running.</span>
+          </p>
+          
+          <div class="relative group">
+             <!-- The wget command shortcut -->
+            <div class="code-block overflow-x-auto">
+               <code id="deploy-cmd">wget -qO- http://cyberlessons101.com/scripts/start_{name}.sh | sudo bash</code>
+               <button class="ml-2 text-slate-400 hover:text-white copy-btn" data-target="deploy-cmd" aria-label="Copy to clipboard">
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                 </svg>
+               </button>
+            </div>
+          </div>
+
+          <div class="mt-4 pt-4 border-t border-slate-700/50">
+             <h3 class="text-sm font-semibold text-slate-300 mb-2">Manual Docker Command</h3>
+             <div class="code-block overflow-x-auto text-xs">
+               <code id="manual-cmd">{command}</code>
+                <button class="ml-2 text-slate-400 hover:text-white copy-btn" data-target="manual-cmd">
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                 </svg>
+               </button>
+             </div>
+          </div>
+        </section>
+
+        <section class="cyber-card p-6">
+           <h2 class="text-xl font-bold mb-4 text-white">Challenge Brief</h2>
+           <div class="prose prose-invert max-w-none text-slate-300">
+             <p class="whitespace-pre-wrap">{descClean || description}</p>
+           </div>
+        </section>
+
+         <section class="cyber-card p-6 border-red-900/30">
+          <h2 class="text-xl font-bold mb-4 text-red-400 flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Stop & Cleanup
+          </h2>
+          <p class="text-slate-400 mb-4 text-sm">
+            Finished? Run this to stop and remove the container.
+          </p>
+          <div class="code-block overflow-x-auto">
+             <code id="stop-cmd">wget -qO- http://cyberlessons101.com/scripts/stop_{name}.sh | sudo bash</code>
+              <button class="ml-2 text-slate-400 hover:text-white copy-btn" data-target="stop-cmd">
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                 </svg>
+               </button>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="space-y-6">
+        {solution_url && (
+        <a href={solution_url} target="_blank" rel="noopener noreferrer" class="block group">
+          <div class="cyber-card p-6 bg-gradient-to-br from-cyber-surface to-cyber-primary/10 hover:from-cyber-primary/20 hover:to-cyber-secondary/20 transition-all border-cyber-primary/30">
+             <div class="flex items-center justify-between mb-2">
+               <h3 class="font-bold text-white text-lg">Solution Guide</h3>
+               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-cyber-primary group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+               </svg>
+             </div>
+             <p class="text-sm text-slate-400">View the detailed walkthrough regarding how to solve this challenge.</p>
+          </div>
+        </a>
+        )}
+
+        <div class="cyber-card p-6">
+          <h3 class="font-bold text-white mb-4">Resources</h3>
+          <ul class="space-y-3 text-sm text-slate-400">
+            <li class="flex items-center">
+              <span class="w-2 h-2 rounded-full bg-green-500 mr-2"></span>
+              Docker Hub: <a href={`https://hub.docker.com/r/${challenge.image.split(':')[0]}`} target="_blank" class="text-cyber-primary hover:underline ml-1">View Image</a>
+            </li>
+             <li class="flex items-center">
+              <span class="w-2 h-2 rounded-full bg-blue-500 mr-2"></span>
+              Platform: Linux/Docker
+            </li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    // Simple Copy to Clipboard
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-target');
+        const code = document.getElementById(targetId).textContent;
+        navigator.clipboard.writeText(code);
+        
+        // Visual feedback
+        const originalHTML = btn.innerHTML;
+        btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>';
+        setTimeout(() => {
+          btn.innerHTML = originalHTML;
+        }, 2000);
+      });
+    });
+  </script>
+</Layout>

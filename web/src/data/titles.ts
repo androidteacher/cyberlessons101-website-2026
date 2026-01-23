@@ -1,0 +1,21 @@
+export const titleMapping: Record<string, string> = {
+    "flag-b": "Reverse Shell Lab",
+    "ctf-mime-challenge-flag-n": "MIME Type Bypass Lab",
+    "ctf-base64": "Base64 Shell Encoding Lab",
+    "ctf-mod-cgi": "CGI Exploitation Lab",
+    "flag_j": "SSTI (Flask) Lab",
+    "burp_ctf": "Burp Suite Basics",
+    "flag5": "SQL Injection Lab",
+    "ctf-flag-7": "Phar Deserialization Lab",
+    "flag8": "Git Dumper Lab",
+    "ctf-flag-9": "Cookie Brute Force Lab",
+    "flag-e-container": "SSH Tunneling Lab",
+    "flag-f": "DNS Zone Transfer Lab",
+    "flag-g": "Encoded Cookie Lab",
+    "flag-h": "SSH Brute Force Lab",
+    "flag-i": "Python POST Variable Lab",
+    "flag_l_container": "GET vs POST Lab",
+    "flag-o": "Weather API RCE Lab",
+    "flag-p": "PHP Deserialization Lab",
+    "flag-q": "SSRF Hex Bypass Lab"
+};
