@@ -20,9 +20,31 @@ import Layout from '../layouts/Layout.astro';
           Ubuntu / Linux (Recommended)
         </h2>
         <div class="prose prose-invert prose-sm text-slate-300">
-          <p>The easiest way to install Docker on Ubuntu is using the convenience script:</p>
-          <pre class="bg-black/50 p-4 rounded-lg">curl -fsSL https://get.docker.com -o get-docker.sh
-sudo sh get-docker.sh</pre>
+          <p>We recommend installing the latest version of Docker using the official repository.</p>
+          
+          <div class="mb-4">
+            <p class="font-bold text-white mb-2">1. Set up Docker's apt repository.</p>
+            <pre class="bg-black/50 p-4 rounded-lg overflow-x-auto"><code># Add Docker's official GPG key:
+sudo apt update
+sudo apt install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt update</code></pre>
+          </div>
+
+          <div class="mb-4">
+             <p class="font-bold text-white mb-2">2. Install the Docker packages.</p>
+             <p class="text-xs mb-2 text-slate-400">This will install the latest version of Docker.</p>
+             <pre class="bg-black/50 p-4 rounded-lg overflow-x-auto"><code>sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</code></pre>
+          </div>
+
           <p>Don't forget to add your user to the docker group so you don't need sudo for every command:</p>
           <pre class="bg-black/50 p-4 rounded-lg">sudo usermod -aG docker $USER</pre>
           <p><em>Log out and log back in for this to take effect.</em></p>
@@ -32,7 +54,7 @@ sudo sh get-docker.sh</pre>
       <section class="cyber-card p-8">
         <h2 class="text-xl font-bold text-white mb-4">Windows & Mac</h2>
         <p class="text-slate-400 text-sm mb-4">
-          For Windows and Mac users, we recommend <strong>Docker Desktop</strong>.
+          For Windows and Mac users, I would consider <strong>Docker Desktop</strong>.
         </p>
         <a href="https://www.docker.com/products/docker-desktop/" target="_blank" class="btn-primary inline-flex items-center">
           Download Docker Desktop
