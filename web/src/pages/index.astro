@@ -16,11 +16,30 @@ const challenges = ctfData.filter(item => item.type === 'challenge');
     <p class="text-lg text-slate-400 max-w-2xl mx-auto">
       Classroom CyberSecurity Training. Deploy instantly with Docker.
     </p>
+
+    <!-- Search Bar -->
+    <div class="max-w-md mx-auto mt-8 relative">
+      <div class="relative">
+        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+          <svg class="h-5 w-5 text-slate-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <input
+          type="text"
+          id="search-input"
+          class="block w-full pl-10 pr-3 py-2 border border-white/10 rounded-lg leading-5 bg-cyber-darker text-slate-300 placeholder-slate-500 focus:outline-none focus:bg-cyber-surface/50 focus:border-cyber-primary focus:ring-1 focus:ring-cyber-primary sm:text-sm transition-colors"
+          placeholder="Search challenges (e.g. SSH, Base64)..."
+        />
+      </div>
+    </div>
   </header>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    {challenges.map((challenge) => (
-      <article class="cyber-card p-6 flex flex-col h-full group relative">
+  <div id="challenges-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {challenges.map((challenge) => {
+      const displayTitle = titleMapping[challenge.name] || challenge.name.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+      return (
+      <article class="cyber-card p-6 flex flex-col h-full group relative challenge-card" data-title={displayTitle.toLowerCase()} data-name={challenge.name.toLowerCase()}>
         <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-cyber-primary to-cyber-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
         
         <div class="flex items-start justify-between mb-4">
@@ -38,7 +57,7 @@ const challenges = ctfData.filter(item => item.type === 'challenge');
         <h2 class="text-xl font-bold mb-2 text-white group-hover:text-cyber-primary transition-colors">
           <a href={`/challenges/${challenge.name}`} class="focus:outline-none">
             <span class="absolute inset-0" aria-hidden="true"></span>
-            {titleMapping[challenge.name] || challenge.name.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}
+            {displayTitle}
           </a>
         </h2>
         
@@ -66,6 +85,102 @@ const challenges = ctfData.filter(item => item.type === 'challenge');
            </span>
         </div>
       </article>
-    ))}
+      );
+    })}
   </div>
+  
+  <div id="no-results" class="hidden text-center py-12">
+    <p class="text-slate-400 text-lg">No challenges found matching your search.</p>
+  </div>
+
+  <!-- Pagination Controls -->
+  <div id="pagination-controls" class="flex justify-center items-center space-x-2 mt-12">
+    <!-- Will be populated by JS -->
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('search-input');
+      const grid = document.getElementById('challenges-grid');
+      const cards = Array.from(document.querySelectorAll('.challenge-card'));
+      const noResults = document.getElementById('no-results');
+      const paginationControls = document.getElementById('pagination-controls');
+
+      const ITEMS_PER_PAGE = 9;
+      let currentPage = 1;
+      let visibleCards = [...cards]; // Start with all cards visible
+
+      function updatePagination() {
+        const totalPages = Math.ceil(visibleCards.length / ITEMS_PER_PAGE);
+        
+        // Ensure current page is valid
+        if (currentPage > totalPages) currentPage = totalPages || 1;
+        if (currentPage < 1) currentPage = 1;
+
+        // Render Cards
+        cards.forEach(card => card.classList.add('hidden')); // Hide all first
+        
+        const start = (currentPage - 1) * ITEMS_PER_PAGE;
+        const end = start + ITEMS_PER_PAGE;
+        const pageItems = visibleCards.slice(start, end);
+        
+        pageItems.forEach(card => card.classList.remove('hidden'));
+
+        // Render Pagination Buttons
+        paginationControls.innerHTML = '';
+        if (totalPages <= 1) return;
+
+        // Previous Button
+        const prevBtn = document.createElement('button');
+        prevBtn.innerHTML = '&larr;';
+        prevBtn.className = `px-3 py-1 rounded border border-white/10 ${currentPage === 1 ? 'text-slate-600 cursor-not-allowed' : 'text-slate-300 hover:bg-cyber-surface hover:text-white'}`;
+        prevBtn.disabled = currentPage === 1;
+        prevBtn.onclick = () => { if (currentPage > 1) { currentPage--; updatePagination(); window.scrollTo({ top: 0, behavior: 'smooth' }); } };
+        paginationControls.appendChild(prevBtn);
+
+        // Page Numbers
+        for (let i = 1; i <= totalPages; i++) {
+            const btn = document.createElement('button');
+            btn.textContent = i;
+            btn.className = `px-3 py-1 rounded border ${i === currentPage ? 'bg-cyber-primary text-black border-cyber-primary font-bold' : 'border-white/10 text-slate-300 hover:bg-cyber-surface hover:text-white'}`;
+            btn.onclick = () => { currentPage = i; updatePagination(); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+            paginationControls.appendChild(btn);
+        }
+
+        // Next Button
+        const nextBtn = document.createElement('button');
+        nextBtn.innerHTML = '&rarr;';
+        nextBtn.className = `px-3 py-1 rounded border border-white/10 ${currentPage === totalPages ? 'text-slate-600 cursor-not-allowed' : 'text-slate-300 hover:bg-cyber-surface hover:text-white'}`;
+        nextBtn.disabled = currentPage === totalPages;
+        nextBtn.onclick = () => { if (currentPage < totalPages) { currentPage++; updatePagination(); window.scrollTo({ top: 0, behavior: 'smooth' }); } };
+        paginationControls.appendChild(nextBtn);
+      }
+
+      function filterCards() {
+        const query = searchInput.value.toLowerCase().trim();
+        
+        visibleCards = cards.filter(card => {
+          const title = card.getAttribute('data-title') || '';
+          const name = card.getAttribute('data-name') || '';
+          return title.includes(query) || name.includes(query);
+        });
+
+        if (visibleCards.length === 0) {
+            grid.classList.add('hidden');
+            noResults.classList.remove('hidden');
+        } else {
+            grid.classList.remove('hidden');
+            noResults.classList.add('hidden');
+        }
+
+        currentPage = 1; // Reset to first page on search
+        updatePagination();
+      }
+
+      searchInput.addEventListener('input', filterCards);
+
+      // Initial Load
+      updatePagination();
+    });
+  </script>
 </Layout>
