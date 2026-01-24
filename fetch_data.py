@@ -5,6 +5,40 @@ import time
 
 # List of commands provided by the user
 commands_text = """
+docker run -d -it --rm -p 80:80 -p 1337:1337 joshbeck2024/python_digit_challenge:latest
+docker run -d --name sql-web -p 5000:5000 joshbeck2024/sql-injection-chal-package-search:tagname
+docker run -d --name notes-api -p 9000:9000 joshbeck2024/notes-api:latest
+docker run -d --name xxe-challenge -p 9001:80 joshbeck2024/xxe-challenge:latest
+docker run -d --restart unless-stopped -p 9005:80 --name js_flag joshbeck2024/js_flag_1:latest
+docker run -d --restart unless-stopped -p 9006:9006 --name zipslip joshbeck2024/zipslip:latest
+docker run -d --name numberizer --restart unless-stopped -p 9007:80 joshbeck2024/numberizer:latest
+docker run -d --name git-challenge -p 9030:80 --restart always joshbeck2024/git-challenge
+docker run -d --name front-end-bypass-challenge -p 9020:80 --restart always joshbeck2024/front-end-bypass-challenge
+docker run -d --name robot-ctf -p 9040:80 --restart always joshbeck2024/robots_ctf
+docker run -d --name simpleMath -p 9050:9050 --restart always joshbeck2024/simple_math_ctf
+docker run -d --name numberizer --restart unless-stopped -p 9007:80 joshbeck2024/numberizer:latest
+docker run -d --name front-end-bypass-challenge -p 9020:80 --restart always joshbeck2024/front-end-bypass-challenge
+docker run -d -p 9898:80 --restart always --name brute-login joshbeck2024/brute_login_ctf
+docker run -d -p 3005:3005 --restart always --name cookie-overflow joshbeck2024/cookie_bot-ctf-challenge
+docker run -d -p 3010:3000 --restart always --name ctf-minecraft joshbeck2024/ctf-api-fuzzing
+docker run -d -p 3020:3020 --restart always --name magic_method_container joshbeck2024/magic-method-ctf
+docker run -d -p 3030:3030 --restart always --name ctf-403 joshbeck2024/403-bypass-ctf
+docker run -d -p 9035:9040 --restart always --name js_ctf_container joshbeck2024/ctf_javascript_number_guessing
+docker run -d -p 9045:80 --name pizza_planet_xxe --restart always joshbeck2024/ctf_local-xxe
+docker run -d -p 9055:80 --restart always --name ctf-revshell joshbeck2024/ctf-rev-shell-mime=type
+docker run -p 9066:3000 -d --restart always joshbeck2024/ctf-prototype-pollution
+docker run -d -p 9077:21 -p 6200:6200 --name vsftpd-challenge --restart always joshbeck2024/cve-2011-2523
+docker run -d -p 9099:80 --restart always --name neg_eq joshbeck2024/ctf_negative_equity
+docker run -d -p 5055:3000 --name websockets --restart always joshbeck2024/ctf_websockets_challenge
+docker run -d -p 5666:80 --restart always --name ctf-json-post joshbeck2024/ctf-json-post
+docker run -d -p 3111:3111 --restart always --name ctf-ascii-rev joshbeck2024/ctf-ascii-rev
+docker run -p 3222:5000 --restart always -d joshbeck2024/ctf-wireshark-login
+docker run -d -p 3333:3333 --restart always chacha_challenge
+docker run -d -p 3444:80 --name ctf-php-filter --restart always joshbeck2024/ctf-php-filter
+docker run -d --restart always -p 3555:3555 joshbeck2024/ctf-xss-admin-bot
+docker run -d -p 3777:5000 --restart always --name ctf-alphabet-soup joshbeck2024/ctf-alphabet-soup
+docker run -d -p 3999:80 --restart always --name ctf-redirection joshbeck2024/ctf-redirection-challenge
+docker run -d -p 9028:80 --restart always --name Flag-red51 joshbeck2024/ctf-file-upload-bypass-content-type-flag-red51
 docker run -d -p 9027:80 --name red50 --restart always joshbeck2024/ctf_xss_to_null_byte_injection_flag_red50
 docker run -d -p 9026:8080 -p 3306:3306 --restart always --name Flag-red47 joshbeck2024/ctf-log4shell-jndi-flag-red47
 docker run -d --cap-add=NET_ADMIN -p 5354:53/udp -p 9025:80 --name Flag-red46 --restart always joshbeck2024/ctf-dns-firewall-bypass-flag-red46
