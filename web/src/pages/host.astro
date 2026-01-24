@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Host This Website">
+  <div class="max-w-3xl mx-auto">
+    <header class="mb-10 border-b border-white/10 pb-6">
+      <h1 class="text-4xl font-bold mb-4 text-white">Host This Website!</h1>
+      <p class="text-lg text-slate-400">
+        Want to run this CTF index locally or on your own server? It's just one command away.
+      </p>
+    </header>
+
+    <div class="space-y-8">
+      
+      <section class="cyber-card p-8">
+        <h2 class="text-2xl font-bold text-white mb-4">Run the Container</h2>
+        <div class="prose prose-invert prose-sm text-slate-300">
+          <p>This website is packaged as a Docker container. You can run it instantly with the following command:</p>
+          
+          <div class="mb-4">
+            <pre class="bg-black/50 p-4 rounded-lg overflow-x-auto"><code>docker run -d --restart always -p 80:80 --name cyberlessons101 joshbeck2024/cyberlessons101-website:latest</code></pre>
+          </div>
+          
+          <p class="mt-4">
+              Once running, open <a href="http://localhost" class="text-cyber-primary hover:underline">http://localhost</a> in your browser.
+          </p>
+        </div>
+      </section>
+
+      <section class="cyber-card p-8 border-red-900/30">
+        <h2 class="text-xl font-bold text-red-400 mb-4">Cleanup</h2>
+        <p class="text-slate-400 text-sm mb-4">
+          To stop and remove the website container:
+        </p>
+        <pre class="bg-black/50 p-4 rounded-lg overflow-x-auto"><code>docker stop cyberlessons101 && docker rm cyberlessons101</code></pre>
+      </section>
+
+    </div>
+  </div>
+</Layout>
