@@ -1,6 +1,557 @@
 [
   {
     "type": "challenge",
+    "command": "docker run -d -p 9031:9031 --name flag-red58 --restart always joshbeck2024/ctf-cve-2023-40028-ghost",
+    "name": "flag-red58",
+    "image": "joshbeck2024/ctf-cve-2023-40028-ghost",
+    "ports": [
+      "9031:9031"
+    ],
+    "description": "CTF activity: Ghost Symlink File Disclosure. Solution Guide Included.",
+    "full_description": "docker run -d -p 9031:9031 --name flag-red58 --restart always joshbeck2024/ctf-cve-2023-40028-ghost\n\nSolution Guide: https://humble-raptor-f30.notion.site/RED_58-CodeMonkey-1d84c8e5237680ef9aa2f8cdad99cbf1?source=copy_link\n\n",
+    "solution_url": "https://humble-raptor-f30.notion.site/RED_58-CodeMonkey-1d84c8e5237680ef9aa2f8cdad99cbf1?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-cve-2023-40028-ghost"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9030:3000 --name flag-red57 --restart always joshbeck2024/ctf-cve-2025-29927",
+    "name": "flag-red57",
+    "image": "joshbeck2024/ctf-cve-2025-29927",
+    "ports": [
+      "9030:3000"
+    ],
+    "description": "CTF Activity:  Nextjs. Solution Guide Included",
+    "full_description": "docker run -d -p 9030:3000 --name flag-red57 --restart always joshbeck2024/ctf-cve-2025-29927\n\nSolution Guide: https://humble-raptor-f30.notion.site/RED_57-Next-JS-12-2-1cf4c8e523768079b949d1f2b4c81549?source=copy_link\n",
+    "solution_url": "https://humble-raptor-f30.notion.site/RED_57-Next-JS-12-2-1cf4c8e523768079b949d1f2b4c81549?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-cve-2025-29927"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d --privileged --shm-size=2g -p 9029:5000 --name red53 --restart always joshbeck2024/ctf-xss-bot-flag-red53",
+    "name": "red53",
+    "image": "joshbeck2024/ctf-xss-bot-flag-red53",
+    "ports": [
+      "9029:5000"
+    ],
+    "description": "",
+    "full_description": "docker run -d --privileged --shm-size=2g -p 9029:5000 --name red53 --restart always joshbeck2024/ctf-xss-bot-flag-red53\n\nSolution Guide: https://humble-raptor-f30.notion.site/Payload-Pursuit-XSS-Challenge-Dockerized-2f24c8e52376803d9de9d362badd4b84?source=copy_link\n\n",
+    "solution_url": "https://humble-raptor-f30.notion.site/Payload-Pursuit-XSS-Challenge-Dockerized-2f24c8e52376803d9de9d362badd4b84?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-xss-bot-flag-red53"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -it --rm -p 80:80 -p 1337:1337 joshbeck2024/python_digit_challenge:latest",
+    "name": "unknown",
+    "image": "joshbeck2024/python_digit_challenge:latest",
+    "ports": [
+      "80:80",
+      "1337:1337"
+    ],
+    "description": "Stand up this server and challenge students to recover the flag.\n",
+    "full_description": "This is a python CTF challenge telnet server.<br>\nParticipants must construct a program that reveals the flag.\n<br><br>\nThis repository contains:<br>\n-An Apache webserver on port 80 <br>\n-A telnet server on port 1337 <br>\n<br> <br>\ndocker run -d -it --rm \\ <br>\n  -p 80:80 \\ <br>\n  -p 1337:1337 \\ <br>\n  joshbeck2024/python_digit_challenge:latest <Br>\n\nSolution Guide: https://www.notion.so/Python_Digit_Challenge-2e24c8e523768003af92e153f651e023?source=copy_link\n\n\n",
+    "solution_url": "https://www.notion.so/Python_Digit_Challenge-2e24c8e523768003af92e153f651e023?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/python_digit_challenge"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d --name sql-web -p 5000:5000 joshbeck2024/sql-injection-chal-package-search:tagname",
+    "name": "sql-web",
+    "image": "joshbeck2024/sql-injection-chal-package-search:tagname",
+    "ports": [
+      "5000:5000"
+    ],
+    "description": "This is an sql injection challenge. ",
+    "full_description": "This is a CTF SQL injection challenge.\n\ndocker run -d \\ <br>\n  --name sql-web \\ <br>\n  -p 5000:5000 \\ <br>\n  joshbeck2024/sql-injection-chal-package-search:latest\n\nSolution Guide: https://www.notion.so/SQL-Package-Search-2e24c8e5237680959e9bc8896a6820c8?source=copy_link\n",
+    "solution_url": "https://www.notion.so/SQL-Package-Search-2e24c8e5237680959e9bc8896a6820c8?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/sql-injection-chal-package-search"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d --name notes-api -p 9000:9000 joshbeck2024/notes-api:latest",
+    "name": "notes-api",
+    "image": "joshbeck2024/notes-api:latest",
+    "ports": [
+      "9000:9000"
+    ],
+    "description": "CTF Activity: The flag is the admin password!",
+    "full_description": "docker run -d  --restart unless-stopped --name notes-api   -p 9000:9000   joshbeck2024/notes-api:latest\n\nThis is a CTF activity.\nThe flag is a admin password.\n\nCan you API?\n\nSolution Guide: https://www.notion.so/notes-api-2e24c8e5237680898c5df386ebe31bae?source=copy_link\n",
+    "solution_url": "https://www.notion.so/notes-api-2e24c8e5237680898c5df386ebe31bae?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/notes-api"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d --name xxe-challenge -p 9001:80 joshbeck2024/xxe-challenge:latest",
+    "name": "xxe-challenge",
+    "image": "joshbeck2024/xxe-challenge:latest",
+    "ports": [
+      "9001:80"
+    ],
+    "description": "CTF Challenge. Can you reveal the flag!\nOOB XXE",
+    "full_description": "docker run -d   --name xxe-challenge   -p 9001:80   joshbeck2024/xxe-challenge:latest\n\nThis is a CTF Challenge.\nOOB XXE Required.\n\nGot the skills to uncover the flag?\n\nSolution Guide: https://www.notion.so/OOB-XXE-2e84c8e52376805fba02d84ec2308df7?source=copy_link\n\n",
+    "solution_url": "https://www.notion.so/OOB-XXE-2e84c8e52376805fba02d84ec2308df7?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/xxe-challenge"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d --restart unless-stopped -p 9005:80 --name js_flag joshbeck2024/js_flag_1:latest",
+    "name": "js_flag",
+    "image": "joshbeck2024/js_flag_1:latest",
+    "ports": [
+      "9005:80"
+    ],
+    "description": "This is an nginx server hosting a CTF activity.\nCan you uncover the flag?",
+    "full_description": "This is a CTF activity.\nIt is an Nginx container hosting a challenge where the user is challenged to uncover the flag.\n\ndocker run -d --restart unless-stopped -p 9005:80 --name js_flag joshbeck2024/js_flag_1:latest\n\nSolution Guide: https://www.notion.so/Secure-Vault-2e24c8e523768020b8aad5ee31c180fa?source=copy_link\n\n",
+    "solution_url": "https://www.notion.so/Secure-Vault-2e24c8e523768020b8aad5ee31c180fa?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/js_flag_1"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d --restart unless-stopped -p 9006:9006 --name zipslip joshbeck2024/zipslip:latest",
+    "name": "zipslip",
+    "image": "joshbeck2024/zipslip:latest",
+    "ports": [
+      "9006:9006"
+    ],
+    "description": "This is a CTF activity.\nCan you uncover the flag?",
+    "full_description": "docker run -d --restart unless-stopped -p 9006:9006 --name zipslip joshbeck2024/zipslip:latest\n\nCan you upload a file that breaks the access control?\n\nSolution Guide: https://www.notion.so/ZipSlip-2e34c8e5237680c7bbf4de716e0c2603?source=copy_link\n\n",
+    "solution_url": "https://www.notion.so/ZipSlip-2e34c8e5237680c7bbf4de716e0c2603?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/zipslip"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d --name numberizer --restart unless-stopped -p 9007:80 joshbeck2024/numberizer:latest",
+    "name": "numberizer",
+    "image": "joshbeck2024/numberizer:latest",
+    "ports": [
+      "9007:80"
+    ],
+    "description": "Can you sum up the values to produce a negative result and receive the flag?\n",
+    "full_description": "docker run -d \\\n  --name numberizer \\\n  --restart unless-stopped \\\n  -p 9007:80 \\\n  joshbeck2024/numberizer:latest\n\nYou should provide the index.php source code to participants.\n\nSolution Guide: https://www.notion.so/Numberizer-2e34c8e5237680edbe30ef41557e9523?source=copy_link\n\n",
+    "solution_url": "https://www.notion.so/Numberizer-2e34c8e5237680edbe30ef41557e9523?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/numberizer"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d --name git-challenge -p 9030:80 --restart always joshbeck2024/git-challenge",
+    "name": "git-challenge",
+    "image": "joshbeck2024/git-challenge",
+    "ports": [
+      "9030:80"
+    ],
+    "description": "",
+    "full_description": "",
+    "solution_url": null,
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/git-challenge"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d --name front-end-bypass-challenge -p 9020:80 --restart always joshbeck2024/front-end-bypass-challenge",
+    "name": "front-end-bypass-challenge",
+    "image": "joshbeck2024/front-end-bypass-challenge",
+    "ports": [
+      "9020:80"
+    ],
+    "description": "CTF Activity: Simple Webserver\nCan you find the flag?",
+    "full_description": "docker run -d \\\n  --name front-end-bypass-challenge \\\n  -p 9020:80 \\\n  --restart always \\\n  joshbeck2024/front-end-bypass-challenge\n\nSolution Guide: https://www.notion.so/Client-Side-2e64c8e523768059a98cc26fbde21704?source=copy_link\n\n",
+    "solution_url": "https://www.notion.so/Client-Side-2e64c8e523768059a98cc26fbde21704?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/front-end-bypass-challenge"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d --name robot-ctf -p 9040:80 --restart always joshbeck2024/robots_ctf",
+    "name": "robot-ctf",
+    "image": "joshbeck2024/robots_ctf",
+    "ports": [
+      "9040:80"
+    ],
+    "description": "SImple CTF example.\nStudents go to robots.txt, which leads to the next step.",
+    "full_description": "docker run -d \\\n  --name robot-ctf \\\n  -p 9040:80 \\\n  --restart always \\\n  joshbeck2024/robots_ctf\n\nSolution Guide: https://www.notion.so/Bot-2e64c8e5237680aa8804e2ba9a224b36?source=copy_link\n\n",
+    "solution_url": "https://www.notion.so/Bot-2e64c8e5237680aa8804e2ba9a224b36?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/robots_ctf"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d --name simpleMath -p 9050:9050 --restart always joshbeck2024/simple_math_ctf",
+    "name": "simpleMath",
+    "image": "joshbeck2024/simple_math_ctf",
+    "ports": [
+      "9050:9050"
+    ],
+    "description": "Python nc server. Can you add them up to get the flag?",
+    "full_description": "docker run -d \\\n  --name simpleMath \\\n  -p 9050:9050 \\\n  --restart always \\\n  joshbeck2024/simple_math_ctf\n\nSolution Guide: https://www.notion.so/Simple-Math-2e64c8e523768091bfbccedcf497155b?source=copy_link\n\n",
+    "solution_url": "https://www.notion.so/Simple-Math-2e64c8e523768091bfbccedcf497155b?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/simple_math_ctf"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d --name numberizer --restart unless-stopped -p 9007:80 joshbeck2024/numberizer:latest",
+    "name": "numberizer",
+    "image": "joshbeck2024/numberizer:latest",
+    "ports": [
+      "9007:80"
+    ],
+    "description": "Can you sum up the values to produce a negative result and receive the flag?\n",
+    "full_description": "docker run -d \\\n  --name numberizer \\\n  --restart unless-stopped \\\n  -p 9007:80 \\\n  joshbeck2024/numberizer:latest\n\nYou should provide the index.php source code to participants.\n\nSolution Guide: https://www.notion.so/Numberizer-2e34c8e5237680edbe30ef41557e9523?source=copy_link\n\n",
+    "solution_url": "https://www.notion.so/Numberizer-2e34c8e5237680edbe30ef41557e9523?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/numberizer"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d --name front-end-bypass-challenge -p 9020:80 --restart always joshbeck2024/front-end-bypass-challenge",
+    "name": "front-end-bypass-challenge",
+    "image": "joshbeck2024/front-end-bypass-challenge",
+    "ports": [
+      "9020:80"
+    ],
+    "description": "CTF Activity: Simple Webserver\nCan you find the flag?",
+    "full_description": "docker run -d \\\n  --name front-end-bypass-challenge \\\n  -p 9020:80 \\\n  --restart always \\\n  joshbeck2024/front-end-bypass-challenge\n\nSolution Guide: https://www.notion.so/Client-Side-2e64c8e523768059a98cc26fbde21704?source=copy_link\n\n",
+    "solution_url": "https://www.notion.so/Client-Side-2e64c8e523768059a98cc26fbde21704?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/front-end-bypass-challenge"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9898:80 --restart always --name brute-login joshbeck2024/brute_login_ctf",
+    "name": "brute-login",
+    "image": "joshbeck2024/brute_login_ctf",
+    "ports": [
+      "9898:80"
+    ],
+    "description": "Mary can't log into her account.\nCan you help? She uses a simple password",
+    "full_description": "docker run -d -p 9898:80 --restart always --name brute-login joshbeck2024/brute_login_ctf\n\nSolution Guide: https://www.notion.so/Mary-s-Facebook-2e64c8e5237680469c60c1878cc44c53?source=copy_link\n",
+    "solution_url": "https://www.notion.so/Mary-s-Facebook-2e64c8e5237680469c60c1878cc44c53?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/brute_login_ctf"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 3005:3005 --restart always --name cookie-overflow joshbeck2024/cookie_bot-ctf-challenge",
+    "name": "cookie-overflow",
+    "image": "joshbeck2024/cookie_bot-ctf-challenge",
+    "ports": [
+      "3005:3005"
+    ],
+    "description": "CTF Challenge: Can you overflow the cookie jar of the admin bot.",
+    "full_description": "docker run -d -p 3005:3005 --restart always --name cookie-overflow joshbeck2024/cookie_bot-ctf-challenge\n\nSolution Guide: https://www.notion.so/Cookie-OverFlow-Challenge-2e74c8e5237680c79e8be1d7f3fb38f0?source=copy_link\n",
+    "solution_url": "https://www.notion.so/Cookie-OverFlow-Challenge-2e74c8e5237680c79e8be1d7f3fb38f0?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/cookie_bot-ctf-challenge"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 3010:3000 --restart always --name ctf-minecraft joshbeck2024/ctf-api-fuzzing",
+    "name": "ctf-minecraft",
+    "image": "joshbeck2024/ctf-api-fuzzing",
+    "ports": [
+      "3010:3000"
+    ],
+    "description": "Can you fuzz the API endpoint to mine more that 100,000 coins to get the flag?",
+    "full_description": "docker run -d -p 3010:3000 --restart always --name ctf-minecraft joshbeck2024/ctf-api-fuzzing\n\nSolution Guide: https://www.notion.so/API-Minecraft-2e74c8e5237680b6b973d007e3d6fca5?source=copy_link\n\n",
+    "solution_url": "https://www.notion.so/API-Minecraft-2e74c8e5237680b6b973d007e3d6fca5?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-api-fuzzing"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 3020:3020 --restart always --name magic_method_container joshbeck2024/magic-method-ctf",
+    "name": "magic_method_container",
+    "image": "joshbeck2024/magic-method-ctf",
+    "ports": [
+      "3020:3020"
+    ],
+    "description": "CTF Challenge: Change the request method to get the flag.",
+    "full_description": "docker run -d -p 3020:3020 --restart always --name magic_method_container joshbeck2024/magic-method-ctf\n\nSolution Guide: https://www.notion.so/Magic-Method-2e74c8e5237680848ac4c39d041e866c?source=copy_link\n\n",
+    "solution_url": "https://www.notion.so/Magic-Method-2e74c8e5237680848ac4c39d041e866c?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/magic-method-ctf"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 3030:3030 --restart always --name ctf-403 joshbeck2024/403-bypass-ctf",
+    "name": "ctf-403",
+    "image": "joshbeck2024/403-bypass-ctf",
+    "ports": [
+      "3030:3030"
+    ],
+    "description": "CTF Challenge: Can you bypass the 403 page and reveal the flag?",
+    "full_description": "docker run -d -p 3030:3030 --restart always --name ctf-403 joshbeck2024/403-bypass-ctf\n\nSolution Guide: https://www.notion.so/403-2e74c8e5237680078884e039b6198d0d?source=copy_link\n",
+    "solution_url": "https://www.notion.so/403-2e74c8e5237680078884e039b6198d0d?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/403-bypass-ctf"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9035:9040 --restart always --name js_ctf_container joshbeck2024/ctf_javascript_number_guessing",
+    "name": "js_ctf_container",
+    "image": "joshbeck2024/ctf_javascript_number_guessing",
+    "ports": [
+      "9035:9040"
+    ],
+    "description": "Can you guess the correct number and reveal the flag?",
+    "full_description": "docker run -d -p 9035:9040 --restart always --name js_ctf_container joshbeck2024/ctf_javascript_number_guessing\n\nJust read the javascript and you'll see that a different secret number is embedded each time. Easy peasy!\n\n",
+    "solution_url": null,
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf_javascript_number_guessing"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9045:80 --name pizza_planet_xxe --restart always joshbeck2024/ctf_local-xxe",
+    "name": "pizza_planet_xxe",
+    "image": "joshbeck2024/ctf_local-xxe",
+    "ports": [
+      "9045:80"
+    ],
+    "description": "Can you upload an XML file to reveal the flag at /flag/flag.txt?",
+    "full_description": "docker run -d -p 9045:80 --name pizza_planet_xxe --restart always joshbeck2024/ctf_local-xxe\n\nSolution Guide: https://www.notion.so/Local-XXE-2e74c8e52376802f81a3c7c0de9a5481?source=copy_link\n",
+    "solution_url": "https://www.notion.so/Local-XXE-2e74c8e52376802f81a3c7c0de9a5481?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf_local-xxe"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9055:80 --restart always --name ctf-revshell joshbeck2024/ctf-rev-shell-mime=type",
+    "name": "ctf-revshell",
+    "image": "joshbeck2024/ctf-rev-shell-mime=type",
+    "ports": [
+      "9055:80"
+    ],
+    "description": "",
+    "full_description": "",
+    "solution_url": null,
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-rev-shell-mime=type"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -p 9066:3000 -d --restart always joshbeck2024/ctf-prototype-pollution",
+    "name": "unknown",
+    "image": "joshbeck2024/ctf-prototype-pollution",
+    "ports": [
+      "9066:3000"
+    ],
+    "description": "CTF Activity: Provide the server.js source code to participants.",
+    "full_description": "docker run -p 9066:3000 -d --restart always joshbeck2024/ctf-prototype-pollution\n\nSolution Guide: https://www.notion.so/Prototype-Pollution-2e74c8e5237680a1b4f3ceecddcc00fd?source=copy_link\n\n",
+    "solution_url": "https://www.notion.so/Prototype-Pollution-2e74c8e5237680a1b4f3ceecddcc00fd?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-prototype-pollution"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9077:21 -p 6200:6200 --name vsftpd-challenge --restart always joshbeck2024/cve-2011-2523",
+    "name": "vsftpd-challenge",
+    "image": "joshbeck2024/cve-2011-2523",
+    "ports": [
+      "9077:21",
+      "6200:6200"
+    ],
+    "description": "",
+    "full_description": "",
+    "solution_url": null,
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/cve-2011-2523"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9099:80 --restart always --name neg_eq joshbeck2024/ctf_negative_equity",
+    "name": "neg_eq",
+    "image": "joshbeck2024/ctf_negative_equity",
+    "ports": [
+      "9099:80"
+    ],
+    "description": "CTF Challenge: Can you get more than 10,000 coins?",
+    "full_description": "docker run -d -p 9099:80 --restart always --name neg_eq joshbeck2024/ctf_negative_equity\n\nSolution Guide: https://www.notion.so/Negative-Equity-2e74c8e52376803cac7ad183253b2397?source=copy_link\n",
+    "solution_url": "https://www.notion.so/Negative-Equity-2e74c8e52376803cac7ad183253b2397?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf_negative_equity"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 5055:3000 --name websockets --restart always joshbeck2024/ctf_websockets_challenge",
+    "name": "websockets",
+    "image": "joshbeck2024/ctf_websockets_challenge",
+    "ports": [
+      "5055:3000"
+    ],
+    "description": "CTF Activity: Can you get admin?>\nProvide the file passwords.txt to participants. ",
+    "full_description": "\ndocker run -d -p 5055:3000 --name websockets --restart always joshbeck2024/ctf_websockets_challenge\n\nSolution Guide: https://www.notion.so/Can-You-Admin-2e84c8e52376803eb007d5e9e1cc7d22?source=copy_link\n",
+    "solution_url": "https://www.notion.so/Can-You-Admin-2e84c8e52376803eb007d5e9e1cc7d22?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf_websockets_challenge"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 5666:80 --restart always --name ctf-json-post joshbeck2024/ctf-json-post",
+    "name": "ctf-json-post",
+    "image": "joshbeck2024/ctf-json-post",
+    "ports": [
+      "5666:80"
+    ],
+    "description": "Can you post the correct data to this webserver to reveal the flag?",
+    "full_description": "docker run -d -p 5666:80 --restart always --name ctf-json-post joshbeck2024/ctf-json-post\n\nSolution Guide: https://www.notion.so/JSON-2e84c8e52376809291e5df2de224e666?source=copy_link\n",
+    "solution_url": "https://www.notion.so/JSON-2e84c8e52376809291e5df2de224e666?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-json-post"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 3111:3111 --restart always --name ctf-ascii-rev joshbeck2024/ctf-ascii-rev",
+    "name": "ctf-ascii-rev",
+    "image": "joshbeck2024/ctf-ascii-rev",
+    "ports": [
+      "3111:3111"
+    ],
+    "description": "CTF Activity: nc IP_ADDRESS 3111. Can you get the flag?",
+    "full_description": "docker run -d -p 3111:3111 --restart always --name ctf-ascii-rev joshbeck2024/ctf-ascii-rev\n\nnc IP_OF_SERVER 3111\n\nCan you get the flag?\n\nSolution Guide: https://www.notion.so/Man-in-the-Mirror-2e94c8e5237680dcb2c1e864d4e23f20?source=copy_link\n",
+    "solution_url": "https://www.notion.so/Man-in-the-Mirror-2e94c8e5237680dcb2c1e864d4e23f20?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-ascii-rev"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -p 3222:5000 --restart always -d joshbeck2024/ctf-wireshark-login",
+    "name": "unknown",
+    "image": "joshbeck2024/ctf-wireshark-login",
+    "ports": [
+      "3222:5000"
+    ],
+    "description": "CTF: pcap analysis. Can you login as admin and get the flag?",
+    "full_description": "docker run -p 3222:5000 --restart always -d joshbeck2024/ctf-wireshark-login\n\nSolution Guide: https://www.notion.so/Wireshark-Login-2e94c8e5237680908849e0edbe99bf2e?source=copy_link\n",
+    "solution_url": "https://www.notion.so/Wireshark-Login-2e94c8e5237680908849e0edbe99bf2e?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-wireshark-login"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 3444:80 --name ctf-php-filter --restart always joshbeck2024/ctf-php-filter",
+    "name": "ctf-php-filter",
+    "image": "joshbeck2024/ctf-php-filter",
+    "ports": [
+      "3444:80"
+    ],
+    "description": "CTF: Use phpfilter:// to obtain the flag.",
+    "full_description": "docker run -d -p 3444:80 --name ctf-php-filter --restart always joshbeck2024/ctf-php-filter\n\nSolution Guide: https://www.notion.so/Filtering-through-the-code-2e94c8e523768018b298efc920224dcd?source=copy_link\n",
+    "solution_url": "https://www.notion.so/Filtering-through-the-code-2e94c8e523768018b298efc920224dcd?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-php-filter"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d --restart always -p 3555:3555 joshbeck2024/ctf-xss-admin-bot",
+    "name": "unknown",
+    "image": "joshbeck2024/ctf-xss-admin-bot",
+    "ports": [
+      "3555:3555"
+    ],
+    "description": "CTF: The admin bot checks your messages every minute. Can you exploit this behavior with XSS?",
+    "full_description": "docker run -d --restart always -p 3555:3555 joshbeck2024/ctf-xss-admin-bot\n\n\nAdmin bot checks for messages every minute. Can you exploit this behavior using XSS to reveal the flag?\n\nSolution Guide: https://www.notion.so/Simple-XSS-2e94c8e52376807e91b1df0b209a8916?source=copy_link\n\n",
+    "solution_url": "https://www.notion.so/Simple-XSS-2e94c8e52376807e91b1df0b209a8916?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-xss-admin-bot"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 3777:5000 --restart always --name ctf-alphabet-soup joshbeck2024/ctf-alphabet-soup",
+    "name": "ctf-alphabet-soup",
+    "image": "joshbeck2024/ctf-alphabet-soup",
+    "ports": [
+      "3777:5000"
+    ],
+    "description": "CTF: Can you find the flag? (Developer tools!)",
+    "full_description": "docker run -d -p 3777:5000 --restart always --name ctf-alphabet-soup joshbeck2024/ctf-alphabet-soup\n\nSolution Guide: https://www.notion.so/Alphabet-Soup-2ea4c8e5237680e19c19c4bd0578d00a?source=copy_link\n",
+    "solution_url": "https://www.notion.so/Alphabet-Soup-2ea4c8e5237680e19c19c4bd0578d00a?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-alphabet-soup"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 3999:80 --restart always --name ctf-redirection joshbeck2024/ctf-redirection-challenge",
+    "name": "ctf-redirection",
+    "image": "joshbeck2024/ctf-redirection-challenge",
+    "ports": [
+      "3999:80"
+    ],
+    "description": "CTF: Can you find the flag using Burp Suite.",
+    "full_description": "docker run -d -p 3999:80 --restart always --name ctf-redirection joshbeck2024/ctf-redirection-challenge\n\nSolution Guide: https://www.notion.so/Watership-Down-2ea4c8e523768090bf7ad1cb727205d6?source=copy_link",
+    "solution_url": "https://www.notion.so/Watership-Down-2ea4c8e523768090bf7ad1cb727205d6?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-redirection-challenge"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9028:80 --restart always --name Flag-red51 joshbeck2024/ctf-file-upload-bypass-content-type-flag-red51",
+    "name": "Flag-red51",
+    "image": "joshbeck2024/ctf-file-upload-bypass-content-type-flag-red51",
+    "ports": [
+      "9028:80"
+    ],
+    "description": "",
+    "full_description": "docker run -d -p 9028:80 --restart always --name Flag-red51 joshbeck2024/ctf-file-upload-bypass-content-type-flag-red51\n\nSolution Guide: https://humble-raptor-f30.notion.site/RED51-Secure-File-Upload-10e4c8e5237680d58385f2b043d31d72?source=copy_link",
+    "solution_url": "https://humble-raptor-f30.notion.site/RED51-Secure-File-Upload-10e4c8e5237680d58385f2b043d31d72?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-file-upload-bypass-content-type-flag-red51"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9027:80 --name red50 --restart always joshbeck2024/ctf_xss_to_null_byte_injection_flag_red50",
+    "name": "red50",
+    "image": "joshbeck2024/ctf_xss_to_null_byte_injection_flag_red50",
+    "ports": [
+      "9027:80"
+    ],
+    "description": "",
+    "full_description": "docker run -d -p 9027:80 --name red50 --restart always joshbeck2024/ctf_xss_to_null_byte_injection_flag_red50\n\nSolution Guide: https://humble-raptor-f30.notion.site/Red50-Full-Writeup-1064c8e5237680df8a72c0ef74214257?source=copy_link\n",
+    "solution_url": "https://humble-raptor-f30.notion.site/Red50-Full-Writeup-1064c8e5237680df8a72c0ef74214257?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf_xss_to_null_byte_injection_flag_red50"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9026:8080 -p 3306:3306 --restart always --name Flag-red47 joshbeck2024/ctf-log4shell-jndi-flag-red47",
+    "name": "Flag-red47",
+    "image": "joshbeck2024/ctf-log4shell-jndi-flag-red47",
+    "ports": [
+      "9026:8080",
+      "3306:3306"
+    ],
+    "description": "Can you exploit this using a malicious LDAP server? Solution Guide Included.",
+    "full_description": "docker run -d -p 9026:8080 -p 3306:3306 --restart always --name Flag-red47 joshbeck2024/ctf-log4shell-jndi-flag-red47\n\nSolution Guide: https://humble-raptor-f30.notion.site/Log4Shell-Red47-c8c685cce269451a8275896ec3b19093?source=copy_link\n",
+    "solution_url": "https://humble-raptor-f30.notion.site/Log4Shell-Red47-c8c685cce269451a8275896ec3b19093?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-log4shell-jndi-flag-red47"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d --cap-add=NET_ADMIN -p 5354:53/udp -p 9025:80 --name Flag-red46 --restart always joshbeck2024/ctf-dns-firewall-bypass-flag-red46",
+    "name": "Flag-red46",
+    "image": "joshbeck2024/ctf-dns-firewall-bypass-flag-red46",
+    "ports": [
+      "5354:53/udp",
+      "9025:80"
+    ],
+    "description": "CTF: Bypass a firewall rule that only allows data to leave the machine on port 5353",
+    "full_description": "docker run -d --cap-add=NET_ADMIN -p 5354:53/udp -p 9025:80 --name Flag-red46 --restart always joshbeck2024/ctf-dns-firewall-bypass-flag-red46\n\nSolution Guide: https://humble-raptor-f30.notion.site/DNS-Resolver-Red46-618998efdda141b985988bae192140b3?source=copy_link\n",
+    "solution_url": "https://humble-raptor-f30.notion.site/DNS-Resolver-Red46-618998efdda141b985988bae192140b3?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-dns-firewall-bypass-flag-red46"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9024:80 --name Flag-red45 joshbeck2024/ctf-roundcube-1.2.0-flag-red45",
+    "name": "Flag-red45",
+    "image": "joshbeck2024/ctf-roundcube-1.2.0-flag-red45",
+    "ports": [
+      "9024:80"
+    ],
+    "description": "CTF: Roundcube CVE-2017-16651",
+    "full_description": "Solution Guide: https://humble-raptor-f30.notion.site/Roundcube-Red45-6ab847812cc942ee8b1da08b077fbd42?source=copy_link\n\ndocker run -d -p 9024:80 --name Flag-red45 joshbeck2024/ctf-roundcube-1.2.0-flag-red45",
+    "solution_url": "https://humble-raptor-f30.notion.site/Roundcube-Red45-6ab847812cc942ee8b1da08b077fbd42?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-roundcube-1.2.0-flag-red45"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9023:80 --name Flag-red44 --restart always joshbeck2024/ctf-php-type-juggling-flag-red44",
+    "name": "Flag-red44",
+    "image": "joshbeck2024/ctf-php-type-juggling-flag-red44",
+    "ports": [
+      "9023:80"
+    ],
+    "description": "CTF: PHP Type Juggling. Directions Included.",
+    "full_description": "",
+    "solution_url": null,
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-php-type-juggling-flag-red44"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9021:80 -p 9022:22 --network flag-red25-net --cap-add=NET_ADMIN --restart always --name Flag_red25 joshbeck2024/ctf-403-bypass-flag-red25",
+    "name": "Flag_red25",
+    "image": "joshbeck2024/ctf-403-bypass-flag-red25",
+    "ports": [
+      "9021:80",
+      "9022:22"
+    ],
+    "description": "CTF Activity: 403 Bypass/SSH Key Exfil",
+    "full_description": "Solution Guide: https://humble-raptor-f30.notion.site/403-Red25-278ecf45c0154fe08e5c5c6b7de3ebc7?source=copy_link\n\ndocker network create --driver bridge --opt com.docker.network.driver.mtu=1422 flag-red25-net\n\ndocker run -d -p 9021:80 -p 9022:22 --network flag-red25-net --cap-add=NET_ADMIN --restart always --name Flag_red25 joshbeck2024/ctf-403-bypass-flag-red25\n",
+    "solution_url": "https://humble-raptor-f30.notion.site/403-Red25-278ecf45c0154fe08e5c5c6b7de3ebc7?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-403-bypass-flag-red25"
+  },
+  {
+    "type": "challenge",
     "command": "docker run -d -p 9000:80 --restart always --name flag-b joshbeck2024/ctf-simple-rev-shell",
     "name": "flag-b",
     "image": "joshbeck2024/ctf-simple-rev-shell",
