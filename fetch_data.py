@@ -5,6 +5,7 @@ import time
 
 # List of commands provided by the user
 commands_text = """
+docker run -d -p 9030:3000 --name flag-red57 --restart always joshbeck2024/ctf-cve-2025-29927
 docker run -d --privileged --shm-size=2g -p 9029:5000 --name red53 --restart always joshbeck2024/ctf-xss-bot-flag-red53
 docker run -d -it --rm -p 80:80 -p 1337:1337 joshbeck2024/python_digit_challenge:latest
 docker run -d --name sql-web -p 5000:5000 joshbeck2024/sql-injection-chal-package-search:tagname
