@@ -5,6 +5,7 @@ import time
 
 # List of commands provided by the user
 commands_text = """
+docker run -d -p 9027:80 --name red50 --restart always joshbeck2024/ctf_xss_to_null_byte_injection_flag_red50
 docker run -d -p 9026:8080 -p 3306:3306 --restart always --name Flag-red47 joshbeck2024/ctf-log4shell-jndi-flag-red47
 docker run -d --cap-add=NET_ADMIN -p 5354:53/udp -p 9025:80 --name Flag-red46 --restart always joshbeck2024/ctf-dns-firewall-bypass-flag-red46
 docker run -d -p 9024:80 --name Flag-red45 joshbeck2024/ctf-roundcube-1.2.0-flag-red45
