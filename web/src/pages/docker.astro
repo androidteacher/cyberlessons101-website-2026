@@ -52,6 +52,19 @@ sudo apt update</code></pre>
       </section>
 
       <section class="cyber-card p-8">
+        <h2 class="text-2xl font-bold text-white mb-4 flex items-center">
+          <svg class="w-8 h-8 mr-3 text-blue-500" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+          Kali Linux
+        </h2>
+        <div class="prose prose-invert prose-sm text-slate-300">
+           <p>For Kali Linux users, you can install Docker directly using apt.</p>
+           <pre class="bg-black/50 p-4 rounded-lg"><code>sudo apt install docker.io</code></pre>
+           <p class="mt-4">Don't forget to add your user to the docker group:</p>
+           <pre class="bg-black/50 p-4 rounded-lg">sudo usermod -aG docker $USER</pre>
+        </div>
+      </section>
+
+      <section class="cyber-card p-8">
         <h2 class="text-xl font-bold text-white mb-4">Windows & Mac</h2>
         <p class="text-slate-400 text-sm mb-4">
           For Windows and Mac users, I would consider <strong>Docker Desktop</strong>.
