@@ -118,8 +118,24 @@ for line in lines:
         "ports": ports
     })
 
-# Now fetch data from Docker Hub
+# Load existing data to preserve manual edits
+CTF_JSON_PATH = '/home/josh/Antigrav_projects/website_test/web/src/data/ctf.json'
+try:
+    with open(CTF_JSON_PATH, 'r') as f:
+        existing_data = json.load(f)
+    print(f"Loaded {len(existing_data)} existing entries.")
+except FileNotFoundError:
+    existing_data = []
+    print("No existing data found, starting fresh.")
+
+# Create a map for easy lookup by image
+existing_map = {item.get('image'): item for item in existing_data}
+
+# Now fetch data from Docker Hub ONLY if not present
 results = []
+updates_count = 0
+new_count = 0
+skipped_count = 0
 
 for item in challenges:
     if item['type'] == 'setup':
@@ -127,6 +143,15 @@ for item in challenges:
         continue
         
     image_full = item['image']
+    
+    # Check if already exists
+    if image_full in existing_map:
+        # Use existing entry (preserves name, description, solution_url fixes)
+        print(f"Skipping {image_full} (already exists)")
+        results.append(existing_map[image_full])
+        skipped_count += 1
+        continue
+
     if '/' in image_full:
         user, repo = image_full.split('/', 1)
         # Handle cases where tag is present
@@ -137,6 +162,7 @@ for item in challenges:
         continue
 
     print(f"Fetching info for {user}/{repo}...")
+    new_count += 1
     
     url = f"https://hub.docker.com/v2/repositories/{user}/{repo}/"
     
@@ -168,7 +194,11 @@ for item in challenges:
     time.sleep(1) # Be nice to API
 
 # Output to json file
+# Write back to both locations to be safe/consistent
 with open('/home/josh/Antigrav_projects/website_test/ctf_data.json', 'w') as f:
     json.dump(results, f, indent=2)
 
-print("Done.")
+with open(CTF_JSON_PATH, 'w') as f:
+    json.dump(results, f, indent=2)
+
+print(f"Done. Skipped: {skipped_count}, New: {new_count}. Total: {len(results)}")

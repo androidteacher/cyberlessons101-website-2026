@@ -49,7 +49,15 @@ const descClean = full_description.replace(command, '').trim();
         
         <section class="cyber-card p-6">
           <div class="relative group">
-            <h3 class="text-sm font-semibold text-slate-300 mb-2">Run Challenge</h3>
+            <div class="flex justify-between items-start mb-2">
+                <h3 class="text-sm font-semibold text-slate-300">Run Challenge</h3>
+                <a href={`/scripts/start_${name}.sh`} download={`start_${name}.sh`} class="text-xs flex items-center text-cyber-primary hover:text-cyber-secondary transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Download Script
+                </a>
+            </div>
             <p class="text-slate-400 mb-4 text-sm">
                Copy and paste this command into your terminal to start the challenge.
             </p>
@@ -67,7 +75,15 @@ const descClean = full_description.replace(command, '').trim();
 
         <section class="cyber-card p-6 border-red-900/30">
           <div class="relative group">
-            <h3 class="text-sm font-semibold text-red-400 mb-2">Stop & Cleanup</h3>
+            <div class="flex justify-between items-start mb-2">
+                <h3 class="text-sm font-semibold text-red-400">Stop & Cleanup</h3>
+                <a href={`/scripts/stop_${name}.sh`} download={`stop_${name}.sh`} class="text-xs flex items-center text-red-400 hover:text-red-300 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Download Script
+                </a>
+            </div>
             <p class="text-slate-400 mb-4 text-sm">
              Finished? Run this to stop and remove the container.
             </p>

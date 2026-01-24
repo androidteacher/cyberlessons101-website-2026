@@ -41,7 +41,7 @@
   {
     "type": "challenge",
     "command": "docker run -d -it --rm -p 80:80 -p 1337:1337 joshbeck2024/python_digit_challenge:latest",
-    "name": "unknown",
+    "name": "add-them-up",
     "image": "joshbeck2024/python_digit_challenge:latest",
     "ports": [
       "80:80",
@@ -315,7 +315,7 @@
   {
     "type": "challenge",
     "command": "docker run -p 9066:3000 -d --restart always joshbeck2024/ctf-prototype-pollution",
-    "name": "unknown",
+    "name": "simple-xss",
     "image": "joshbeck2024/ctf-prototype-pollution",
     "ports": [
       "9066:3000"

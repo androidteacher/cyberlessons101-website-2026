@@ -1,5 +1,29 @@
 #!/bin/bash
+# Auto-generated start script for flag-e-container
+
+# Function to check if docker command needs sudo
+docker_cmd="docker"
+if ! docker ps >/dev/null 2>&1; then
+    if sudo docker ps >/dev/null 2>&1; then
+        docker_cmd="sudo docker"
+    else
+        echo "Error: Docker is not running or you don't have permissions."
+        echo "Please ensure Docker is installed and running."
+        exit 1
+    fi
+fi
+
 echo "Starting flag-e-container..."
-# Pull latest just in case? Or just run.
-docker run -d -p 9010:22 --network flag-e-net --cap-add=NET_ADMIN --restart always --name flag-e-container joshbeck2024/ctf-tunnel-challenge-flag-e
-    echo "flag-e-container started! Open http://cyberlessons101.com (mapped locally)"
+# Run the command
+$docker_cmd run -d \
+    -p 9010:22 \
+    --restart always \
+    --name flag-e-container \
+    joshbeck2024/ctf-tunnel-challenge-flag-e
+
+echo ""
+echo "--------------------------------------------------------"
+echo "✅ flag-e-container started successfully!"
+echo "--------------------------------------------------------"
+echo "You can access it at: http://localhost:9010"
+echo "--------------------------------------------------------"

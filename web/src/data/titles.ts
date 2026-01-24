@@ -53,5 +53,9 @@ export const titleMapping: Record<string, string> = {
     "vsftpd-challenge": "VSFTPD Backdoor",
     "websockets": "Websockets",
     "xxe-challenge": "OOB XXE",
-    "zipslip": "Zip Slip"
+    "zipslip": "Zip Slip",
+    "add-them-up": "Add Them Up",
+    "simple-xss": "Simple XSS",
+    "wireshark-login": "Wireshark",
+    "xss-admin-bot": "Stored XSS (Admin Bot)"
 };

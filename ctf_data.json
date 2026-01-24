@@ -41,7 +41,7 @@
   {
     "type": "challenge",
     "command": "docker run -d -it --rm -p 80:80 -p 1337:1337 joshbeck2024/python_digit_challenge:latest",
-    "name": "unknown",
+    "name": "add-them-up",
     "image": "joshbeck2024/python_digit_challenge:latest",
     "ports": [
       "80:80",
@@ -315,7 +315,7 @@
   {
     "type": "challenge",
     "command": "docker run -p 9066:3000 -d --restart always joshbeck2024/ctf-prototype-pollution",
-    "name": "unknown",
+    "name": "simple-xss",
     "image": "joshbeck2024/ctf-prototype-pollution",
     "ports": [
       "9066:3000"
@@ -625,7 +625,7 @@
     ],
     "description": "CTF: Can you use Burp to uncover the flags?",
     "full_description": "docker run -d -p 9005:80 --restart always --name burp_ctf joshbeck2024/ctf-burp-suite-basic-training\n\nSolution Guide Activity 1:\nhttps://humble-raptor-f30.notion.site/Red1-Burp-User-Agent-0e6eb79ace764e6e90c76ce8f4253507?source=copy_link\n\nSolution Guide Activity 2:\nhttps://humble-raptor-f30.notion.site/Red2-Burp-Cookies-89e8a30d574d4167a691f32ea5536fbb?source=copy_link\n\nSolution Guide Activity 3:\nhttps://humble-raptor-f30.notion.site/Red3-BurpSuite-Brute-Force-10a1cc9f7ccc4b25a484383b432a96a0?source=copy_link",
-    "solution_url": null,
+    "solution_url": "/challenges/burp_ctf",
     "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-burp-suite-basic-training"
   },
   {
