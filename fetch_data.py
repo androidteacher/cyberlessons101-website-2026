@@ -5,6 +5,7 @@ import time
 
 # List of commands provided by the user
 commands_text = """
+docker run -d -p 9031:9031 --name flag-red58 --restart always joshbeck2024/ctf-cve-2023-40028-ghost
 docker run -d -p 9030:3000 --name flag-red57 --restart always joshbeck2024/ctf-cve-2025-29927
 docker run -d --privileged --shm-size=2g -p 9029:5000 --name red53 --restart always joshbeck2024/ctf-xss-bot-flag-red53
 docker run -d -it --rm -p 80:80 -p 1337:1337 joshbeck2024/python_digit_challenge:latest
