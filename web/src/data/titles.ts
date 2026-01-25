@@ -58,5 +58,6 @@ export const titleMapping: Record<string, string> = {
     "simple-xss": "Simple XSS",
     "wireshark-login": "Wireshark",
     "xss-admin-bot": "Stored XSS (Admin Bot)",
-    "flag-red22": "Har Har Hijack"
+    "flag-red22": "Har Har Hijack",
+    "flag-red18": "Grafana/Postgres RCE"
 };

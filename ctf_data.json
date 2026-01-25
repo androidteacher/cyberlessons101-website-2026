@@ -1,6 +1,20 @@
 [
   {
     "type": "challenge",
+    "command": "docker run -d --restart always -p 9034:3000 --name flag-red18 joshbeck2024/ctf-grafana-postgres-sql-injection-flag-red18",
+    "name": "flag-red18",
+    "image": "joshbeck2024/ctf-grafana-postgres-sql-injection-flag-red18",
+    "ports": [
+      "9034:3000"
+    ],
+    "description": "CTF Activity: Exploit a server running postgres/grafana. (RCE). Solution guide included",
+    "full_description": "docker run -d --restart always -p 9034:3000 --name flag-red18 joshbeck2024/ctf-grafana-postgres-sql-injection-flag-red18\n\nSolution Guide: https://humble-raptor-f30.notion.site/QueryQuake-Shaking-Grafana-through-Postgres-Dockerized-2f34c8e5237680699945c407c9128cf1?source=copy_link",
+    "solution_url": "https://humble-raptor-f30.notion.site/QueryQuake-Shaking-Grafana-through-Postgres-Dockerized-2f34c8e5237680699945c407c9128cf1?source=copy_link",
+    "category": null,
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-grafana-postgres-sql-injection-flag-red18"
+  },
+  {
+    "type": "challenge",
     "command": "docker run -d -p 9033:80 --name flag-red22 --restart always joshbeck2024/ctf-har-hijack-okta-plunder-flag-red22",
     "name": "flag-red22",
     "image": "joshbeck2024/ctf-har-hijack-okta-plunder-flag-red22",
