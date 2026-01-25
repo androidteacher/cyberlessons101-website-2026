@@ -813,5 +813,18 @@
     "full_description": "docker run -d -p 9020:80 --restart always --name flag-q joshbeck2024/ctf-ssrf-hex-bypass-flag-q\n\nSolution Guide: https://humble-raptor-f30.notion.site/q-SSRF-Hex-064ee0d604754a00b4156fec158da600?source=copy_link\n",
     "solution_url": "https://humble-raptor-f30.notion.site/q-SSRF-Hex-064ee0d604754a00b4156fec158da600?source=copy_link",
     "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-ssrf-hex-bypass-flag-q"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d -p 9080:80 --restart always --name dtmf-challenge joshbeck2024/ctf-dtmf-flag",
+    "name": "dtmf-challenge",
+    "image": "joshbeck2024/ctf-dtmf-flag",
+    "ports": [
+      "9080:80"
+    ],
+    "description": "CTF Activity: Can you decode the audio file and find the flag?",
+    "full_description": "docker run -d -p 2828:80 --name ctf-dtmf-container --restart always joshbeck2024/ctf-dtmf-flag\n\nSolution Guide: https://www.notion.so/Phoning-Home-2ec4c8e52376808d8f1eff1757521df0?source=copy_link\n",
+    "solution_url": "https://www.notion.so/Phoning-Home-2ec4c8e52376808d8f1eff1757521df0?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-dtmf-flag"
   }
 ]

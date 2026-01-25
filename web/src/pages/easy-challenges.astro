@@ -4,7 +4,20 @@ import Layout from '../layouts/Layout.astro';
 import ctfData from '../data/ctf.json';
 import { titleMapping } from '../data/titles';
 
-const challenges = ctfData.filter(item => item.type === 'challenge' && item.name === 'flag-red6');
+const easyChallenges = [
+  'joshbeck2024/ctf-pam_deny-flag-red6',
+  'joshbeck2024/ctf-simple-rev-shell',
+  'joshbeck2024/ctf-rev-shell-mime-flag-n',
+  'joshbeck2024/ctf-weather-api-rce-flag-o',
+  'joshbeck2024/ctf-cookie-brute-force-flag-9',
+  'joshbeck2024/ctf-sql-inject-flag-5',
+  'joshbeck2024/ctf-zone-transfer-flag-f',
+  'joshbeck2024/ctf-burp-suite-basic-training',
+  'joshbeck2024/ctf-dtmf-flag',
+  'joshbeck2024/ctf-php-filter'
+];
+
+const challenges = ctfData.filter(item => item.type === 'challenge' && easyChallenges.includes(item.image));
 ---
 
 <Layout title="Easy Challenges">

@@ -68,6 +68,7 @@ docker run -d -p 9017:80 --restart always --name flag_l_container joshbeck2024/c
 docker run -d -p 9018:80 --restart always --name flag-o joshbeck2024/ctf-weather-api-rce-flag-o
 docker run -d -p 9019:80 --restart always --name flag-p joshbeck2024/ctf-php-deserialization-flag-p
 docker run -d -p 9020:80 --restart always --name flag-q joshbeck2024/ctf-ssrf-hex-bypass-flag-q
+docker run -d -p 9080:80 --restart always --name dtmf-challenge joshbeck2024/ctf-dtmf-flag
 """
 
 # Regex to extract info
