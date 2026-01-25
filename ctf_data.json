@@ -1,6 +1,20 @@
 [
   {
     "type": "challenge",
+    "command": "docker run -d --restart always --name flag-red31 -p 9035:8080 joshbeck2024/ctf-jenkins-cve-2024-23897-red31",
+    "name": "flag-red31",
+    "image": "joshbeck2024/ctf-jenkins-cve-2024-23897-red31",
+    "ports": [
+      "9035:8080"
+    ],
+    "description": "CTF Activity: cve-2024-23897 Jenkins LFI to RCE. Walkthrough Included",
+    "full_description": "docker run -d --restart always --name flag-red31 -p 9035:8080 joshbeck2024/ctf-jenkins-cve-2024-23897-red31\n\nSolution Guide: https://humble-raptor-f30.notion.site/Breach-the-Build-Exploiting-Jenkins-CVE-2024-23897-Dockerized-2f34c8e52376805d9d5befaf028bd04c?source=copy_link\n",
+    "solution_url": "https://humble-raptor-f30.notion.site/Breach-the-Build-Exploiting-Jenkins-CVE-2024-23897-Dockerized-2f34c8e52376805d9d5befaf028bd04c?source=copy_link",
+    "category": null,
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-jenkins-cve-2024-23897-red31"
+  },
+  {
+    "type": "challenge",
     "command": "docker run -d --restart always -p 9034:3000 --name flag-red18 joshbeck2024/ctf-grafana-postgres-sql-injection-flag-red18",
     "name": "flag-red18",
     "image": "joshbeck2024/ctf-grafana-postgres-sql-injection-flag-red18",
