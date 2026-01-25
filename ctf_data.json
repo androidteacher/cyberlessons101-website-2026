@@ -393,8 +393,8 @@
   },
   {
     "type": "challenge",
-    "command": "docker run -p 3222:5000 --restart always -d joshbeck2024/ctf-wireshark-login",
-    "name": "unknown",
+    "command": "docker run -p 3222:5000 --restart always -d --name wireshark-login joshbeck2024/ctf-wireshark-login",
+    "name": "wireshark-login",
     "image": "joshbeck2024/ctf-wireshark-login",
     "ports": [
       "3222:5000"
@@ -419,8 +419,8 @@
   },
   {
     "type": "challenge",
-    "command": "docker run -d --restart always -p 3555:3555 joshbeck2024/ctf-xss-admin-bot",
-    "name": "unknown",
+    "command": "docker run -d --restart always -p 3555:3555 --name xss-admin-bot joshbeck2024/ctf-xss-admin-bot",
+    "name": "xss-admin-bot",
     "image": "joshbeck2024/ctf-xss-admin-bot",
     "ports": [
       "3555:3555"
@@ -532,8 +532,8 @@
       "9023:80"
     ],
     "description": "CTF: PHP Type Juggling. Directions Included.",
-    "full_description": "",
-    "solution_url": null,
+    "full_description": "docker run -d -p 9023:80 --name Flag-red44 --restart always joshbeck2024/ctf-php-type-juggling-flag-red44\n\nSolution Guide: https://www.notion.so/Juggler-Red44-4698673ce1344fcba21a7a2a5f9fee79#2f14c8e5237680efab93e739a9635b27\n",
+    "solution_url": "https://www.notion.so/Juggler-Red44-4698673ce1344fcba21a7a2a5f9fee79#2f14c8e5237680efab93e739a9635b27",
     "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-php-type-juggling-flag-red44"
   },
   {
