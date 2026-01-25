@@ -19,7 +19,7 @@ $docker_cmd run -d \
     -p 9077:21 -p 6200:6200 \
     --restart always \
     --name vsftpd-challenge \
-    joshbeck2024/cve-2011-2523
+    joshbeck2024/cve-2011-2523-vsftpd
 
 echo ""
 echo "--------------------------------------------------------"

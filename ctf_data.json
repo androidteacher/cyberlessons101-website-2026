@@ -327,17 +327,17 @@
   },
   {
     "type": "challenge",
-    "command": "docker run -d -p 9077:21 -p 6200:6200 --name vsftpd-challenge --restart always joshbeck2024/cve-2011-2523",
+    "command": "docker run -d -p 9077:21 -p 6200:6200 --name vsftpd-challenge --restart always joshbeck2024/cve-2011-2523-vsftpd",
     "name": "vsftpd-challenge",
-    "image": "joshbeck2024/cve-2011-2523",
+    "image": "joshbeck2024/cve-2011-2523-vsftpd",
     "ports": [
       "9077:21",
       "6200:6200"
     ],
-    "description": "",
-    "full_description": "",
-    "solution_url": null,
-    "hub_url": "https://hub.docker.com/r/joshbeck2024/cve-2011-2523"
+    "description": "CTF Activity: Can you pop a shell. The flag is in /flag/Flag.txt",
+    "full_description": "docker run -d -p 9077:21 -p 6200:6200 --name vsftpd-challenge --restart always joshbeck2024/cve-2011-2523\n\nSolution Guide: https://www.notion.so/cve-2011-2523-2e74c8e52376801da29adf1427a035f4?source=copy_link\n\n",
+    "solution_url": "https://www.notion.so/cve-2011-2523-2e74c8e52376801da29adf1427a035f4?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/cve-2011-2523-vsftpd"
   },
   {
     "type": "challenge",

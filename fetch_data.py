@@ -30,15 +30,15 @@ docker run -d -p 9035:9040 --restart always --name js_ctf_container joshbeck2024
 docker run -d -p 9045:80 --name pizza_planet_xxe --restart always joshbeck2024/ctf_local-xxe
 docker run -d -p 9055:80 --restart always --name ctf-revshell joshbeck2024/ctf-rev-shell-mime=type
 docker run -p 9066:3000 -d --restart always joshbeck2024/ctf-prototype-pollution
-docker run -d -p 9077:21 -p 6200:6200 --name vsftpd-challenge --restart always joshbeck2024/cve-2011-2523
+docker run -d -p 9077:21 -p 6200:6200 --name vsftpd-challenge --restart always joshbeck2024/cve-2011-2523-vsftpd
 docker run -d -p 9099:80 --restart always --name neg_eq joshbeck2024/ctf_negative_equity
 docker run -d -p 5055:3000 --name websockets --restart always joshbeck2024/ctf_websockets_challenge
 docker run -d -p 5666:80 --restart always --name ctf-json-post joshbeck2024/ctf-json-post
 docker run -d -p 3111:3111 --restart always --name ctf-ascii-rev joshbeck2024/ctf-ascii-rev
-docker run -p 3222:5000 --restart always -d joshbeck2024/ctf-wireshark-login
+docker run -p 3222:5000 --restart always -d --name wireshark-login joshbeck2024/ctf-wireshark-login
 docker run -d -p 3333:3333 --restart always chacha_challenge
 docker run -d -p 3444:80 --name ctf-php-filter --restart always joshbeck2024/ctf-php-filter
-docker run -d --restart always -p 3555:3555 joshbeck2024/ctf-xss-admin-bot
+docker run -d --restart always -p 3555:3555 --name xss-admin-bot joshbeck2024/ctf-xss-admin-bot
 docker run -d -p 3777:5000 --restart always --name ctf-alphabet-soup joshbeck2024/ctf-alphabet-soup
 docker run -d -p 3999:80 --restart always --name ctf-redirection joshbeck2024/ctf-redirection-challenge
 docker run -d -p 9028:80 --restart always --name Flag-red51 joshbeck2024/ctf-file-upload-bypass-content-type-flag-red51
