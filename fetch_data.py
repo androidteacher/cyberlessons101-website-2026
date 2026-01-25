@@ -5,6 +5,7 @@ import time
 
 # List of commands provided by the user
 commands_text = """
+docker run -d --restart always --name flag-red31 -p 9035:8080 joshbeck2024/ctf-jenkins-cve-2024-23897-red31
 docker run -d --restart always -p 9034:3000 --name flag-red18 joshbeck2024/ctf-grafana-postgres-sql-injection-flag-red18
 docker run -d -p 9033:80 --name flag-red22 --restart always joshbeck2024/ctf-har-hijack-okta-plunder-flag-red22
 docker run -d -p 9032:80 --name flag-red6 --restart always joshbeck2024/ctf-pam_deny-flag-red6
