@@ -31,8 +31,24 @@ const { title } = Astro.props;
             CyberLessons<span class="text-white">101</span>
           </a>
         </div>
-        <div class="ml-auto flex gap-6 text-sm font-medium">
-          <a href="/" class="hover:text-cyber-primary transition-colors">Challenges</a>
+        <div class="ml-auto flex gap-6 text-sm font-medium items-center">
+          <!-- Dropdown for Challenges -->
+          <div class="relative group">
+            <button class="flex items-center gap-1 hover:text-cyber-primary transition-colors focus:outline-none py-4">
+              Challenges
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <!-- Dropdown Menu -->
+            <div class="absolute left-0 mt-0 w-48 bg-cyber-darker border border-white/10 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left z-50">
+              <div class="py-1">
+                <a href="/" class="block px-4 py-2 hover:bg-cyber-surface hover:text-cyber-primary transition-colors">All Challenges</a>
+                <a href="/easy-challenges" class="block px-4 py-2 hover:bg-cyber-surface hover:text-cyber-primary transition-colors">Easy Challenges</a>
+              </div>
+            </div>
+          </div>
+
           <a href="/docker" class="hover:text-cyber-primary transition-colors">Setup Docker</a>
           <a href="/host" class="hover:text-cyber-primary transition-colors">Run This Website Locally</a>
           <a href="https://medium.com/@josh.beck2006" target="_blank" class="hover:text-cyber-primary transition-colors">My Medium</a>

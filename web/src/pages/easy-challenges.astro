@@ -1,0 +1,187 @@
+---
+
+import Layout from '../layouts/Layout.astro';
+import ctfData from '../data/ctf.json';
+import { titleMapping } from '../data/titles';
+
+const challenges = ctfData.filter(item => item.type === 'challenge' && item.name === 'flag-red6');
+---
+
+<Layout title="Easy Challenges">
+  <header class="mb-12 text-center">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">
+      <span class="text-cyber-primary inline-block">
+        Easy Challenges
+      </span>
+    </h1>
+    <p class="text-lg text-slate-400 max-w-2xl mx-auto">
+      Classroom CyberSecurity Training. Deploy instantly with Docker.
+    </p>
+
+    <!-- Search Bar -->
+    <div class="max-w-md mx-auto mt-8 relative">
+      <div class="relative">
+        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+          <svg class="h-5 w-5 text-slate-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <input
+          type="text"
+          id="search-input"
+          class="block w-full pl-10 pr-3 py-2 border border-white/10 rounded-lg leading-5 bg-cyber-darker text-slate-300 placeholder-slate-500 focus:outline-none focus:bg-cyber-surface/50 focus:border-cyber-primary focus:ring-1 focus:ring-cyber-primary sm:text-sm transition-colors"
+          placeholder="Search challenges (e.g. SSH, Base64)..."
+        />
+      </div>
+    </div>
+  </header>
+
+  <div id="challenges-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {challenges.map((challenge) => {
+      const displayTitle = titleMapping[challenge.name] || challenge.name.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+      return (
+      <article class="cyber-card p-6 flex flex-col h-full group relative challenge-card" data-title={displayTitle.toLowerCase()} data-name={challenge.name.toLowerCase()}>
+        <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-cyber-primary to-cyber-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+        
+        <div class="flex items-start justify-between mb-4">
+          <div class="bg-cyber-surface/50 p-2 rounded-lg border border-white/5">
+             <!-- Icon based on keyword or generic -->
+             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-cyber-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+             </svg>
+          </div>
+          <span class="text-xs font-mono text-slate-500 bg-black/30 px-2 py-1 rounded">
+            {challenge.name}
+          </span>
+        </div>
+
+        <h2 class="text-xl font-bold mb-2 text-white group-hover:text-cyber-primary transition-colors">
+          <a href={`/challenges/${challenge.name}`} class="focus:outline-none">
+            <span class="absolute inset-0" aria-hidden="true"></span>
+            {displayTitle}
+          </a>
+        </h2>
+        
+        <p class="text-slate-400 text-sm mb-6 flex-grow">
+          {challenge.description || "Deploy this container to practice specific exploitation techniques."}
+        </p>
+
+        <div class="flex items-center justify-between text-sm pt-4 border-t border-white/5">
+           <div class="flex gap-4">
+             <span class="text-cyber-secondary font-mono">
+               Port: {challenge.ports && challenge.ports[0] ? challenge.ports[0].split(':')[0] : 'N/A'}
+             </span>
+             {challenge.solution_url && (
+               <a href={challenge.solution_url} target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:text-amber-200 font-semibold transition-colors flex items-center gap-1 z-10 relative shadow-sm">
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                 </svg>
+                 Solution Guide
+               </a>
+             )}
+           </div>
+           
+           <span class="text-cyber-primary group-hover:translate-x-1 transition-transform">
+             Deploy &rarr;
+           </span>
+        </div>
+      </article>
+      );
+    })}
+  </div>
+  
+  <div id="no-results" class="hidden text-center py-12">
+    <p class="text-slate-400 text-lg">No challenges found matching your search.</p>
+  </div>
+
+  <!-- Pagination Controls -->
+  <div id="pagination-controls" class="flex justify-center items-center space-x-2 mt-12">
+    <!-- Will be populated by JS -->
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('search-input');
+      const grid = document.getElementById('challenges-grid');
+      const cards = Array.from(document.querySelectorAll('.challenge-card'));
+      const noResults = document.getElementById('no-results');
+      const paginationControls = document.getElementById('pagination-controls');
+
+      const ITEMS_PER_PAGE = 9;
+      let currentPage = 1;
+      let visibleCards = [...cards]; // Start with all cards visible
+
+      function updatePagination() {
+        const totalPages = Math.ceil(visibleCards.length / ITEMS_PER_PAGE);
+        
+        // Ensure current page is valid
+        if (currentPage > totalPages) currentPage = totalPages || 1;
+        if (currentPage < 1) currentPage = 1;
+
+        // Render Cards
+        cards.forEach(card => card.classList.add('hidden')); // Hide all first
+        
+        const start = (currentPage - 1) * ITEMS_PER_PAGE;
+        const end = start + ITEMS_PER_PAGE;
+        const pageItems = visibleCards.slice(start, end);
+        
+        pageItems.forEach(card => card.classList.remove('hidden'));
+
+        // Render Pagination Buttons
+        paginationControls.innerHTML = '';
+        if (totalPages <= 1) return;
+
+        // Previous Button
+        const prevBtn = document.createElement('button');
+        prevBtn.innerHTML = '&larr;';
+        prevBtn.className = `px-3 py-1 rounded border border-white/10 ${currentPage === 1 ? 'text-slate-600 cursor-not-allowed' : 'text-slate-300 hover:bg-cyber-surface hover:text-white'}`;
+        prevBtn.disabled = currentPage === 1;
+        prevBtn.onclick = () => { if (currentPage > 1) { currentPage--; updatePagination(); window.scrollTo({ top: 0, behavior: 'smooth' }); } };
+        paginationControls.appendChild(prevBtn);
+
+        // Page Numbers
+        for (let i = 1; i <= totalPages; i++) {
+            const btn = document.createElement('button');
+            btn.textContent = i;
+            btn.className = `px-3 py-1 rounded border ${i === currentPage ? 'bg-cyber-primary text-black border-cyber-primary font-bold' : 'border-white/10 text-slate-300 hover:bg-cyber-surface hover:text-white'}`;
+            btn.onclick = () => { currentPage = i; updatePagination(); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+            paginationControls.appendChild(btn);
+        }
+
+        // Next Button
+        const nextBtn = document.createElement('button');
+        nextBtn.innerHTML = '&rarr;';
+        nextBtn.className = `px-3 py-1 rounded border border-white/10 ${currentPage === totalPages ? 'text-slate-600 cursor-not-allowed' : 'text-slate-300 hover:bg-cyber-surface hover:text-white'}`;
+        nextBtn.disabled = currentPage === totalPages;
+        nextBtn.onclick = () => { if (currentPage < totalPages) { currentPage++; updatePagination(); window.scrollTo({ top: 0, behavior: 'smooth' }); } };
+        paginationControls.appendChild(nextBtn);
+      }
+
+      function filterCards() {
+        const query = searchInput.value.toLowerCase().trim();
+        
+        visibleCards = cards.filter(card => {
+          const title = card.getAttribute('data-title') || '';
+          const name = card.getAttribute('data-name') || '';
+          return title.includes(query) || name.includes(query);
+        });
+
+        if (visibleCards.length === 0) {
+            grid.classList.add('hidden');
+            noResults.classList.remove('hidden');
+        } else {
+            grid.classList.remove('hidden');
+            noResults.classList.add('hidden');
+        }
+
+        currentPage = 1; // Reset to first page on search
+        updatePagination();
+      }
+
+      searchInput.addEventListener('input', filterCards);
+
+      // Initial Load
+      updatePagination();
+    });
+  </script>
+</Layout>
