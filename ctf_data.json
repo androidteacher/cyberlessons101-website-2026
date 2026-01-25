@@ -1,6 +1,20 @@
 [
   {
     "type": "challenge",
+    "command": "docker run -d -p 9033:80 --name flag-red22 --restart always joshbeck2024/ctf-har-hijack-okta-plunder-flag-red22",
+    "name": "flag-red22",
+    "image": "joshbeck2024/ctf-har-hijack-okta-plunder-flag-red22",
+    "ports": [
+      "9033:80"
+    ],
+    "description": "CTF Activity: What is a  .har file anyway? --Solution Guide included",
+    "full_description": "docker run -d -p 9033:80 --name flag-red22 --restart always joshbeck2024/ctf-har-hijack-okta-plunder-flag-red22\n\nSolution Guide: https://humble-raptor-f30.notion.site/Har-Har-Hijack-The-Okta-Plunder-Dockerized-2f34c8e523768034b6bace15c572fbf1?source=copy_link\n\nWebsite Category: Easy",
+    "solution_url": "https://humble-raptor-f30.notion.site/Har-Har-Hijack-The-Okta-Plunder-Dockerized-2f34c8e523768034b6bace15c572fbf1?source=copy_link",
+    "category": "Easy",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-har-hijack-okta-plunder-flag-red22"
+  },
+  {
+    "type": "challenge",
     "command": "docker run -d -p 9032:80 --name flag-red6 --restart always joshbeck2024/ctf-pam_deny-flag-red6",
     "name": "flag-red6",
     "image": "joshbeck2024/ctf-pam_deny-flag-red6",

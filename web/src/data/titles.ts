@@ -57,5 +57,6 @@ export const titleMapping: Record<string, string> = {
     "add-them-up": "Add Them Up",
     "simple-xss": "Simple XSS",
     "wireshark-login": "Wireshark",
-    "xss-admin-bot": "Stored XSS (Admin Bot)"
+    "xss-admin-bot": "Stored XSS (Admin Bot)",
+    "flag-red22": "Har Har Hijack"
 };

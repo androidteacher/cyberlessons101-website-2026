@@ -184,9 +184,14 @@ for item in challenges:
         solution_match = re.search(r'Solution Guide:\s*(https?://[^\s]+)', full_desc)
         solution_url = solution_match.group(1) if solution_match else None
         
+        # Extract Website Category
+        category_match = re.search(r'Website Category:\s*([a-zA-Z0-9]+)', full_desc, re.IGNORECASE)
+        category = category_match.group(1) if category_match else None
+
         item['description'] = short_desc
         item['full_description'] = full_desc
         item['solution_url'] = solution_url
+        item['category'] = category
         item['hub_url'] = f"https://hub.docker.com/r/{user}/{repo}"
         
     except Exception as e:
