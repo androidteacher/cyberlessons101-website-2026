@@ -60,5 +60,6 @@ export const titleMapping: Record<string, string> = {
     "xss-admin-bot": "Stored XSS (Admin Bot)",
     "flag-red22": "Har Har Hijack",
     "flag-red18": "Grafana/Postgres RCE",
-    "flag-red31": "CVE-2024-23897 Jenkins"
+    "flag-red31": "CVE-2024-23897 Jenkins",
+    "flag-red43": "TeamCity Takedown CVE-2023-42793"
 };

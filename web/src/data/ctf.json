@@ -1,6 +1,21 @@
 [
   {
     "type": "challenge",
+    "command": "docker run -d --restart always --name flag-red43 --cap-add=NET_ADMIN -p 9036:80 -p 9037:22 joshbeck2024/ctf-teamcity-cve-2023-42793-red31",
+    "name": "flag-red43",
+    "image": "joshbeck2024/ctf-teamcity-cve-2023-42793-red31",
+    "ports": [
+      "9036:80",
+      "9037:22"
+    ],
+    "description": "CTF Activity: cve-2023-42793 (TeamCity RPC2 Bypass). Solution Included",
+    "full_description": "docker run -d --restart always --name flag-red43 --cap-add=NET_ADMIN -p 9036:80 -p 9037:22 joshbeck2024/ctf-teamcity-cve-2023-42793-red31\n\nSolution Guide: https://humble-raptor-f30.notion.site/TeamCity-Takedown-Breach-Backup-and-Break-in-Dockerized-2f34c8e52376804bbef1eca4c4289850?source=copy_link",
+    "solution_url": "https://humble-raptor-f30.notion.site/TeamCity-Takedown-Breach-Backup-and-Break-in-Dockerized-2f34c8e52376804bbef1eca4c4289850?source=copy_link",
+    "category": null,
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-teamcity-cve-2023-42793-red31"
+  },
+  {
+    "type": "challenge",
     "command": "docker run -d --restart always --name flag-red31 -p 9035:8080 joshbeck2024/ctf-jenkins-cve-2024-23897-red31",
     "name": "flag-red31",
     "image": "joshbeck2024/ctf-jenkins-cve-2024-23897-red31",
