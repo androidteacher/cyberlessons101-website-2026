@@ -64,5 +64,6 @@ export const titleMapping: Record<string, string> = {
     "flag-red43": "TeamCity Takedown CVE-2023-42793",
     "flag-red20": "Tick Tock Intrusion",
     "flag-w": "Wordpress Plugin: wpspritz 1.0",
-    "flag-s": "CVE-2018-12613: phpMyAdmin"
+    "flag-s": "CVE-2018-12613: phpMyAdmin",
+    "flag-red29": "SQL Injection Training. Beyond OR 1=1"
 };

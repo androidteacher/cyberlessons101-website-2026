@@ -1,6 +1,20 @@
 [
   {
     "type": "challenge",
+    "command": "docker run -d -p 9041:80 --restart always --name flag-red29 joshbeck2024/ctf-advanced-sql-injection-training-flag-red29",
+    "name": "flag-red29",
+    "image": "joshbeck2024/ctf-advanced-sql-injection-training-flag-red29",
+    "ports": [
+      "9041:80"
+    ],
+    "description": "CTF Activity: Advanced SQL Injection Training.  Solution Guide Included",
+    "full_description": "docker run -d -p 9041:80 --restart always --name flag-red29 joshbeck2024/ctf-advanced-sql-injection-training-flag-red29\n\nSolution Guide: https://humble-raptor-f30.notion.site/SQL-Injection-Beyond-OR-1-1-An-iCSI-CTF-Dockerized-2f44c8e5237680e5b70bce27f1800934?source=copy_link",
+    "solution_url": "https://humble-raptor-f30.notion.site/SQL-Injection-Beyond-OR-1-1-An-iCSI-CTF-Dockerized-2f44c8e5237680e5b70bce27f1800934?source=copy_link",
+    "category": null,
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-advanced-sql-injection-training-flag-red29"
+  },
+  {
+    "type": "challenge",
     "command": "docker run -d -p 9040:80 --restart always --name flag-s joshbeck2024/ctf-phpmyadmin-cve-2018-12613-flag-s",
     "name": "flag-s",
     "image": "joshbeck2024/ctf-phpmyadmin-cve-2018-12613-flag-s",
