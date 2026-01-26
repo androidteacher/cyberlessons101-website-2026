@@ -1,6 +1,20 @@
 [
   {
     "type": "challenge",
+    "command": "docker run -d -p 9040:80 --restart always --name flag-s joshbeck2024/ctf-phpmyadmin-cve-2018-12613-flag-s",
+    "name": "flag-s",
+    "image": "joshbeck2024/ctf-phpmyadmin-cve-2018-12613-flag-s",
+    "ports": [
+      "9040:80"
+    ],
+    "description": "CTF: Use CEWL and brute force phpmyadmin bypassing csrf. Solution Guide Included.",
+    "full_description": "docker run -d -p 9040:80 --restart always --name flag-s joshbeck2024/ctf-phpmyadmin-cve-2018-12613-flag-s\n\nSolution Guide: https://humble-raptor-f30.notion.site/s-PhpMyAdmin_Exploit-Dockerized-2f44c8e5237680e0831afdf6ec78db80?source=copy_link",
+    "solution_url": "https://humble-raptor-f30.notion.site/s-PhpMyAdmin_Exploit-Dockerized-2f44c8e5237680e0831afdf6ec78db80?source=copy_link",
+    "category": null,
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-phpmyadmin-cve-2018-12613-flag-s"
+  },
+  {
+    "type": "challenge",
     "command": "docker run -d -p 9039:80 --restart always --name flag-w joshbeck2024/ctf-wordpress-wpspritz-rfi-flagw",
     "name": "flag-w",
     "image": "joshbeck2024/ctf-wordpress-wpspritz-rfi-flagw",
