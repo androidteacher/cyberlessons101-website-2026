@@ -1,6 +1,20 @@
 [
   {
     "type": "challenge",
+    "command": "docker run -d -p 9038:80 --restart always --name flag-red20 joshbeck2024/ctf-ticktock-challenge-flag-red20",
+    "name": "flag-red20",
+    "image": "joshbeck2024/ctf-ticktock-challenge-flag-red20",
+    "ports": [
+      "9038:80"
+    ],
+    "description": "CTF Activity: Timing attack, reverse shell, privesc. Solution Guide Included",
+    "full_description": "docker run -d -p 9038:80 --restart always --name flag-red20 joshbeck2024/ctf-ticktock-challenge-flag-red20\n\n\nSolution Guide: https://humble-raptor-f30.notion.site/TickTock-Intrusion-The-Timing-Attack-Challenge-Dockerized-2f44c8e523768086bbedc3b1dc5a71b5?source=copy_link\n",
+    "solution_url": "https://humble-raptor-f30.notion.site/TickTock-Intrusion-The-Timing-Attack-Challenge-Dockerized-2f44c8e523768086bbedc3b1dc5a71b5?source=copy_link",
+    "category": null,
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-ticktock-challenge-flag-red20"
+  },
+  {
+    "type": "challenge",
     "command": "docker run -d --restart always --name flag-red43 --cap-add=NET_ADMIN -p 9036:80 -p 9037:22 joshbeck2024/ctf-teamcity-cve-2023-42793-red31",
     "name": "flag-red43",
     "image": "joshbeck2024/ctf-teamcity-cve-2023-42793-red31",
