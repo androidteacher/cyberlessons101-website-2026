@@ -1,6 +1,20 @@
 [
   {
     "type": "challenge",
+    "command": "docker run -d -p 9039:80 --restart always --name flag-w joshbeck2024/ctf-wordpress-wpspritz-rfi-flagw",
+    "name": "flag-w",
+    "image": "joshbeck2024/ctf-wordpress-wpspritz-rfi-flagw",
+    "ports": [
+      "9039:80"
+    ],
+    "description": "CTF Activity: Wordpress-wpspritz-1.0.0. Solution Guide Included.",
+    "full_description": "docker run -d -p 9039:80 --restart always --name flag-w joshbeck2024/ctf-wordpress-wpspritz-rfi-flagw\n\nSolution Guide: https://humble-raptor-f30.notion.site/w-Vulnerable-Wordpress-Dockerized-2f44c8e5237680f6b803eec58c43dc7a?source=copy_link\n\nWebsite Category: Easy\n",
+    "solution_url": "https://humble-raptor-f30.notion.site/w-Vulnerable-Wordpress-Dockerized-2f44c8e5237680f6b803eec58c43dc7a?source=copy_link",
+    "category": "Easy",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-wordpress-wpspritz-rfi-flagw"
+  },
+  {
+    "type": "challenge",
     "command": "docker run -d -p 9038:80 --restart always --name flag-red20 joshbeck2024/ctf-ticktock-challenge-flag-red20",
     "name": "flag-red20",
     "image": "joshbeck2024/ctf-ticktock-challenge-flag-red20",
