@@ -5,6 +5,7 @@ import time
 
 # List of commands provided by the user
 commands_text = """
+docker run -d -p 23:23 --name flag-red62 --restart always joshbeck2024/ctf-cve-2026-24061-telnetd
 docker run -d -p 9042:80 --restart always --name flag-red61 joshbeck2024/ctf-blind-sql-injection-training-flag-red61
 docker run -d -p 9041:80 --restart always --name flag-red29 joshbeck2024/ctf-advanced-sql-injection-training-flag-red29
 docker run -d -p 9040:80 --restart always --name flag-s joshbeck2024/ctf-phpmyadmin-cve-2018-12613-flag-s
