@@ -1,6 +1,20 @@
 [
   {
     "type": "challenge",
+    "command": "docker run -d -p 9042:80 --restart always --name flag-red61 joshbeck2024/ctf-blind-sql-injection-training-flag-red61",
+    "name": "flag-red61",
+    "image": "joshbeck2024/ctf-blind-sql-injection-training-flag-red61",
+    "ports": [
+      "9042:80"
+    ],
+    "description": "CTF Activity: Blind SQL Injection. Solution Guide Included",
+    "full_description": "docker run -d -p 9042:80 --restart always --name flag-red61 joshbeck2024/ctf-blind-sql-injection-training-flag-red61\n\n\nSolution Guide: https://humble-raptor-f30.notion.site/Sneak-Peek-Mastering-Blind-SQL-Injection-with-SQLMap-and-Manual-Techniques-CVE-2023-6063-Dockeri-2f44c8e52376801897e3c8d51d077df9?source=copy_link\n",
+    "solution_url": "https://humble-raptor-f30.notion.site/Sneak-Peek-Mastering-Blind-SQL-Injection-with-SQLMap-and-Manual-Techniques-CVE-2023-6063-Dockeri-2f44c8e52376801897e3c8d51d077df9?source=copy_link",
+    "category": null,
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-blind-sql-injection-training-flag-red61"
+  },
+  {
+    "type": "challenge",
     "command": "docker run -d -p 9041:80 --restart always --name flag-red29 joshbeck2024/ctf-advanced-sql-injection-training-flag-red29",
     "name": "flag-red29",
     "image": "joshbeck2024/ctf-advanced-sql-injection-training-flag-red29",
