@@ -67,5 +67,7 @@ export const titleMapping: Record<string, string> = {
     "flag-s": "CVE-2018-12613: phpMyAdmin",
     "flag-red29": "SQL Injection Training. Beyond OR 1=1",
     "flag-red61": "Examining Blind SQL Injection: Red61",
-    "flag-red62": "CVE-2026-24061 (telnetd)"
+    "flag-red62": "CVE-2026-24061 (telnetd)",
+    "flag-red63": "WPQuery Exploit: CVE-2024-50498",
+    "flag-red64": "PHP Serialization Basics"
 };

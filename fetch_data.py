@@ -5,8 +5,8 @@ import time
 
 # List of commands provided by the user
 commands_text = """
-sudo docker run -d -p 9045:80 --name flag-red64 --restart always joshbeck2024/ctf-php-serialization-explained-flag-red64
-docker run -d -p 9043:80 --restart always joshbeck2024/ctf-cve-2024-50498-wpquery-flag-red63
+docker run -d -p 9045:80 --name flag-red64 --restart always joshbeck2024/ctf-php-serialization-explained-flag-red64
+docker run -d -p 9043:80 --name flag-red63 --restart always joshbeck2024/ctf-cve-2024-50498-wpquery-flag-red63
 docker run -d -p 23:23 --name flag-red62 --restart always joshbeck2024/ctf-cve-2026-24061-telnetd
 docker run -d -p 9042:80 --restart always --name flag-red61 joshbeck2024/ctf-blind-sql-injection-training-flag-red61
 docker run -d -p 9041:80 --restart always --name flag-red29 joshbeck2024/ctf-advanced-sql-injection-training-flag-red29

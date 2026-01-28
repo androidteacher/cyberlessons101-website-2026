@@ -4,7 +4,7 @@ set -e
 # Image and container names
 IMAGE_NAME="cyberlessons-website"
 CONTAINER_NAME="cyberlessons-website"
-PORT="8080"
+PORT="80"
 
 echo "Building Docker image..."
 if [ -d "./web" ]; then
