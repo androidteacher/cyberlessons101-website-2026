@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Full CTFd Challenge VMs">
+  <div class="max-w-5xl mx-auto space-y-12">
+    <!-- Banner Section -->
+    <div class="relative w-full h-64 md:h-96 rounded-2xl overflow-hidden shadow-2xl border border-cyber-primary/20 group">
+      <div class="absolute inset-0 bg-gradient-to-t from-cyber-darker via-transparent to-transparent z-10"></div>
+      <img 
+        src="/PXL_Classroom.jpg" 
+        alt="iCSI Cybersecurity Classroom" 
+        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+      />
+      <div class="absolute bottom-0 left-0 p-8 z-20">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-2 drop-shadow-lg tracking-tight">
+          Full CTFd Challenge VMs
+        </h1>
+        <p class="text-xl text-cyber-secondary font-medium drop-shadow-md">
+          iCSI Security Operations Center Classroom (Northeast ISD, San Antonio.)
+        </p>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Description Column -->
+      <div class="md:col-span-2 space-y-6 text-slate-300 leading-relaxed text-lg">
+        <div class="bg-cyber-darker p-8 rounded-2xl border border-white/5 shadow-lg">
+          <h2 class="text-2xl font-bold text-cyber-primary mb-4 flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>
+            About These VMs
+          </h2>
+          <p class="mb-4">
+            These images are full <strong>Virtual Machines</strong> designed to be run in VMWare Workstation. They come pre-installed with the <strong>CTFd platform</strong> and are preconfigured with a wide variety of challenges, ready for immediate deployment.
+          </p>
+          <p class="mb-4">
+            These VMs allow you to easily stand up and host a classroom CTF without the hassle of configuring individual challenges or scoring servers. Perfect for educators, clubs, and training sessions.
+          </p>
+          <p class="text-sm text-slate-400 italic mt-6 border-t border-white/10 pt-4">
+            We host these CTFs at our Cybersecurity Magnet (iCSI in San Antonio) on a regular basis. New challenge packs will be released here after our competitions conclude.
+          </p>
+        </div>
+
+        <div class="bg-gradient-to-r from-blue-900/20 to-purple-900/20 p-6 rounded-xl border border-blue-500/20 flex gap-4 items-start">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-400 flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <div>
+                <h3 class="font-bold text-blue-100 text-lg mb-1">Requirements</h3>
+                <p class="text-blue-200/80">
+                    You will need VMWare Workstation (Player or Pro) to run these virtual machines. Ensure your host machine has sufficient RAM and disk space.
+                </p>
+            </div>
+        </div>
+      </div>
+
+      <!-- Links Column -->
+      <div class="space-y-6">
+        <div class="bg-cyber-darker p-6 rounded-2xl border border-cyber-primary/30 shadow-[0_0_15px_rgba(0,0,0,0.2)]">
+          <h3 class="text-xl font-bold text-white mb-6 border-b border-white/10 pb-2">Download Packs</h3>
+          
+          <div class="space-y-4">
+            <a href="https://humble-raptor-f30.notion.site/Free-CTF-Challenge-Pack-Easy-Setup-Big-Impact-c7d2ee35c4e74893bc8a8523bf281975?source=copy_link" target="_blank" class="block group relative overflow-hidden rounded-xl bg-slate-800 hover:bg-slate-700 transition-all duration-300 border border-white/5 hover:border-cyber-primary/50">
+                <div class="absolute inset-0 bg-cyber-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="p-4 relative z-10">
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="font-bold text-cyber-primary text-lg group-hover:text-white transition-colors">Pack #1</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-400 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                    </div>
+                    <p class="text-sm text-slate-400 group-hover:text-slate-300">Easy Setup, Big Impact</p>
+                </div>
+            </a>
+
+            <a href="https://www.notion.so/CTF_Challenge_Pack_2-1364c8e5237680408721c48eda48e830" target="_blank" class="block group relative overflow-hidden rounded-xl bg-slate-800 hover:bg-slate-700 transition-all duration-300 border border-white/5 hover:border-cyber-primary/50">
+                <div class="absolute inset-0 bg-cyber-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div class="p-4 relative z-10">
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="font-bold text-cyber-primary text-lg group-hover:text-white transition-colors">Pack #2</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-400 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                    </div>
+                    <p class="text-sm text-slate-400 group-hover:text-slate-300">Advanced Challenges</p>
+                </div>
+            </a>
+            
+            <div class="p-4 rounded-xl border border-dashed border-white/10 text-center">
+                <p class="text-slate-500 text-sm">More packs coming soon...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
