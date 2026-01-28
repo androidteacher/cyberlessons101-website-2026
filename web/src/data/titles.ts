@@ -66,5 +66,6 @@ export const titleMapping: Record<string, string> = {
     "flag-w": "Wordpress Plugin: wpspritz 1.0",
     "flag-s": "CVE-2018-12613: phpMyAdmin",
     "flag-red29": "SQL Injection Training. Beyond OR 1=1",
-    "flag-red61": "Examining Blind SQL Injection: Red61"
+    "flag-red61": "Examining Blind SQL Injection: Red61",
+    "flag-red62": "CVE-2026-24061 (telnetd)"
 };

@@ -1,6 +1,20 @@
 [
   {
     "type": "challenge",
+    "command": "docker run -d -p 23:23 --name flag-red62 --restart always joshbeck2024/ctf-cve-2026-24061-telnetd",
+    "name": "flag-red62",
+    "image": "joshbeck2024/ctf-cve-2026-24061-telnetd",
+    "ports": [
+      "23:23"
+    ],
+    "description": "CTF: CVE-2026-24061 (Telnetd) via USER Variable. Solution Guide Included.",
+    "full_description": "docker run -d -p 23:23 --name flag-red62 --restart always joshbeck2024/ctf-cve-2026-24061-telnetd\n\nSolution Guide: https://humble-raptor-f30.notion.site/Red-62-CVE-2026-24061-Telnetd-2f54c8e5237680198255ec4a8af371d3?source=copy_link\n",
+    "solution_url": "https://humble-raptor-f30.notion.site/Red-62-CVE-2026-24061-Telnetd-2f54c8e5237680198255ec4a8af371d3?source=copy_link",
+    "category": null,
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-cve-2026-24061-telnetd"
+  },
+  {
+    "type": "challenge",
     "command": "docker run -d -p 9042:80 --restart always --name flag-red61 joshbeck2024/ctf-blind-sql-injection-training-flag-red61",
     "name": "flag-red61",
     "image": "joshbeck2024/ctf-blind-sql-injection-training-flag-red61",
