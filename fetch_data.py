@@ -5,6 +5,7 @@ import time
 
 # List of commands provided by the user
 commands_text = """
+docker run -d --restart always -p 9048:3000 --name flag-red68 joshbeck2024/ctf-javascript-challenge-red68
 docker run -d --restart always -p 9047:80 --name Flag-red65-67 joshbeck2024/ctf-php-serialization-part-2-flag-red65
 docker run -d -p 9045:80 --name flag-red64 --restart always joshbeck2024/ctf-php-serialization-explained-flag-red64
 docker run -d -p 9043:80 --name flag-red63 --restart always joshbeck2024/ctf-cve-2024-50498-wpquery-flag-red63
