@@ -69,5 +69,6 @@ export const titleMapping: Record<string, string> = {
     "flag-red61": "Examining Blind SQL Injection: Red61",
     "flag-red62": "CVE-2026-24061 (telnetd)",
     "flag-red63": "WPQuery Exploit: CVE-2024-50498",
-    "flag-red64": "PHP Serialization Basics"
+    "flag-red64": "PHP Serialization Basics",
+    "Flag-red65-67": "PHP Serialization Part 2 (Magic Methods)"
 };

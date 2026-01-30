@@ -5,6 +5,7 @@ import time
 
 # List of commands provided by the user
 commands_text = """
+docker run -d --restart always -p 9047:80 --name Flag-red65-67 joshbeck2024/ctf-php-serialization-part-2-flag-red65
 docker run -d -p 9045:80 --name flag-red64 --restart always joshbeck2024/ctf-php-serialization-explained-flag-red64
 docker run -d -p 9043:80 --name flag-red63 --restart always joshbeck2024/ctf-cve-2024-50498-wpquery-flag-red63
 docker run -d -p 23:23 --name flag-red62 --restart always joshbeck2024/ctf-cve-2026-24061-telnetd
@@ -133,7 +134,7 @@ for line in lines:
     })
 
 # Load existing data to preserve manual edits
-CTF_JSON_PATH = '/home/josh/Antigrav_projects/website_test/web/src/data/ctf.json'
+CTF_JSON_PATH = '/home/josh/Antigrav_projects/Cyberlessons_website/web/src/data/ctf.json'
 try:
     with open(CTF_JSON_PATH, 'r') as f:
         existing_data = json.load(f)
@@ -214,7 +215,7 @@ for item in challenges:
 
 # Output to json file
 # Write back to both locations to be safe/consistent
-with open('/home/josh/Antigrav_projects/website_test/ctf_data.json', 'w') as f:
+with open('/home/josh/Antigrav_projects/Cyberlessons_website/ctf_data.json', 'w') as f:
     json.dump(results, f, indent=2)
 
 with open(CTF_JSON_PATH, 'w') as f:
