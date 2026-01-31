@@ -25,15 +25,15 @@ import Layout from '../layouts/Layout.astro';
     <div class="flex flex-col items-center w-full space-y-8 md:block">
       
       <section class="cyber-card p-8">
-        <h2 class="text-2xl font-bold text-white mb-4">Run the Scoreboard</h2>
-        <div class="prose prose-invert prose-sm text-slate-300">
+        <h2 class="text-2xl font-bold text-white mb-4 text-center md:text-left">Run the Scoreboard</h2>
+        <div class="prose prose-invert prose-sm text-slate-300 text-center md:text-left w-full mx-auto md:mx-0">
           <p>This command will start a CTF Scoreboard on port 4005.</p>
           
           <div class="mb-4">
-            <pre class="bg-black/50 p-4 rounded-lg overflow-x-auto"><code>docker run -d -p 4005:4005 joshbeck2024/ctf-cyberlessons-flag-scoreboard-public:latest</code></pre>
+            <pre class="bg-black/50 p-4 rounded-lg overflow-x-auto text-left"><code>docker run -d -p 4005:4005 joshbeck2024/ctf-cyberlessons-flag-scoreboard-public:latest</code></pre>
           </div>
 
-          <div class="bg-blue-900/20 border border-blue-500/30 rounded-lg p-4 mb-4">
+          <div class="bg-blue-900/20 border border-blue-500/30 rounded-lg p-4 mb-4 text-center md:text-left">
             <h3 class="text-blue-400 font-bold mb-2">Management Credentials</h3>
             <p>Username: <code class="text-cyber-primary">admin</code></p>
             <p>Password: <code class="text-cyber-primary">admin</code></p>
@@ -47,12 +47,12 @@ import Layout from '../layouts/Layout.astro';
       </section>
 
       <section class="cyber-card p-8 border-red-900/30">
-        <h2 class="text-xl font-bold text-red-400 mb-4">Cleanup</h2>
-        <p class="text-slate-400 text-sm mb-4">
+        <h2 class="text-xl font-bold text-red-400 mb-4 text-center md:text-left">Cleanup</h2>
+        <p class="text-slate-400 text-sm mb-4 text-center md:text-left">
           To stop and remove the scoreboard container:
         </p>
-        <pre class="bg-black/50 p-4 rounded-lg overflow-x-auto"><code>docker stop ctf-scoreboard && docker rm ctf-scoreboard</code></pre>
-        <p class="text-slate-500 text-xs mt-2 italic">Note: Commands may vary based on your container name/ID.</p>     
+        <pre class="bg-black/50 p-4 rounded-lg overflow-x-auto text-left"><code>docker stop ctf-scoreboard && docker rm ctf-scoreboard</code></pre>
+        <p class="text-slate-500 text-xs mt-2 italic text-center md:text-left">Note: Commands may vary based on your container name/ID.</p>     
       </section>
 
     </div>
