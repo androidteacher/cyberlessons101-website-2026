@@ -135,7 +135,7 @@ for line in lines:
     })
 
 # Load existing data to preserve manual edits
-CTF_JSON_PATH = '/home/josh/Antigrav_projects/Cyberlessons_website/web/src/data/ctf.json'
+CTF_JSON_PATH = '/home/josh/Antigrav_projects/website_test/web/src/data/ctf.json'
 try:
     with open(CTF_JSON_PATH, 'r') as f:
         existing_data = json.load(f)
@@ -194,8 +194,14 @@ for item in challenges:
         # Extract Solution Guide from description
         # Pattern: Solution Guide: [url]
         # or similar
-        solution_match = re.search(r'Solution Guide:\s*(https?://[^\s]+)', full_desc)
-        solution_url = solution_match.group(1) if solution_match else None
+        solution_match = re.search(r'Solution Guide:\s*(https?://[^\s]+|Not Published)', full_desc, re.IGNORECASE)
+        solution_url = None
+        if solution_match:
+            captured = solution_match.group(1)
+            if "Not Published" in captured:
+                 solution_url = "/blackbox"
+            else:
+                 solution_url = captured
         
         # Extract Website Category
         category_match = re.search(r'Website Category:\s*([a-zA-Z0-9]+)', full_desc, re.IGNORECASE)
@@ -216,7 +222,7 @@ for item in challenges:
 
 # Output to json file
 # Write back to both locations to be safe/consistent
-with open('/home/josh/Antigrav_projects/Cyberlessons_website/ctf_data.json', 'w') as f:
+with open('/home/josh/Antigrav_projects/website_test/ctf_data.json', 'w') as f:
     json.dump(results, f, indent=2)
 
 with open(CTF_JSON_PATH, 'w') as f:

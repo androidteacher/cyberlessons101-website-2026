@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Black Box Challenge">
+	<main class="container mx-auto px-4 py-8">
+		<div class="max-w-2xl mx-auto text-center">
+			<h1 class="text-4xl font-bold mb-8 text-red-500 glitch-text">Black Box!</h1>
+			
+			<div class="bg-gray-800 p-8 rounded-lg border-2 border-red-500 shadow-[0_0_15px_rgba(239,68,68,0.5)]">
+				<p class="text-xl text-white mb-6">
+					Solution Guide: <span class="text-red-400 font-bold">Not Released</span>.
+				</p>
+				<p class="text-lg text-gray-300 mb-8">
+					This is a true challenge. Good luck!
+				</p>
+				
+				<a 
+					href="/"
+					class="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded transition-colors"
+				>
+					Return to Challenges
+				</a>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+.glitch-text {
+	text-shadow: 2px 2px 0px #ff0000, -2px -2px 0px #00ff00;
+	animation: glitch 1s infinite alternate;
+}
+
+@keyframes glitch {
+	0% { text-shadow: 2px 2px 0px #ff0000, -2px -2px 0px #00ff00; transform: translate(0); }
+	20% { text-shadow: -2px 2px 0px #ff0000, 2px -2px 0px #00ff00; transform: translate(-2px, 2px); }
+	40% { text-shadow: 2px -2px 0px #ff0000, -2px 2px 0px #00ff00; transform: translate(2px, -2px); }
+	60% { text-shadow: -2px -2px 0px #ff0000, 2px 2px 0px #00ff00; transform: translate(-2px, -2px); }
+	80% { text-shadow: 2px 2px 0px #ff0000, -2px -2px 0px #00ff00; transform: translate(2px, 2px); }
+	100% { text-shadow: -2px 2px 0px #ff0000, 2px -2px 0px #00ff00; transform: translate(0); }
+}
+</style>

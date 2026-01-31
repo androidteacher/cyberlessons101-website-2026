@@ -1,6 +1,20 @@
 [
   {
     "type": "challenge",
+    "command": "docker run -d --restart always -p 9048:3000 --name flag-red68 joshbeck2024/ctf-javascript-challenge-red68",
+    "name": "flag-red68",
+    "image": "joshbeck2024/ctf-javascript-challenge-red68",
+    "ports": [
+      "9048:3000"
+    ],
+    "description": "CTF Activity: Can you reveal the flag? (Solution Guide Not Published Yet.) Live challenge!",
+    "full_description": "docker run -d --restart always -p 9048:3000 --name flag-red68 joshbeck2024/ctf-javascript-challenge-red68\n\nSolution Guide: Not Published",
+    "solution_url": "/blackbox",
+    "category": null,
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-javascript-challenge-red68"
+  },
+  {
+    "type": "challenge",
     "command": "docker run -d --restart always -p 9047:80 --name Flag-red65-67 joshbeck2024/ctf-php-serialization-part-2-flag-red65",
     "name": "Flag-red65-67",
     "image": "joshbeck2024/ctf-php-serialization-part-2-flag-red65",
