@@ -19,25 +19,25 @@ import Layout from '../layouts/Layout.astro';
           <svg class="w-8 h-8 mr-3 text-blue-500" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
           Install with Apt (The Easy Way!)
         </h2>
-        <div class="prose prose-invert prose-sm text-slate-300">
+        <div class="prose prose-invert prose-sm text-slate-300 transform md:text-left text-center">
            <p>For Kali Linux users, you can install Docker directly using apt.</p>
-           <pre class="bg-black/50 p-4 rounded-lg"><code>sudo apt install docker.io</code></pre>
+           <pre class="bg-black/50 p-4 rounded-lg whitespace-pre-wrap break-all text-left"><code>sudo apt install docker.io</code></pre>
            <p class="mt-4">Don't forget to add your user to the docker group:</p>
-           <pre class="bg-black/50 p-4 rounded-lg">sudo usermod -aG docker $USER</pre>
+           <pre class="bg-black/50 p-4 rounded-lg whitespace-pre-wrap break-all text-left">sudo usermod -aG docker $USER</pre>
         </div>
       </section>
 
       <section class="cyber-card p-8">
-        <h2 class="text-2xl font-bold text-white mb-4 flex items-center">
-          <svg class="w-8 h-8 mr-3 text-blue-500" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.119a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.186.185.186m-2.93 0h2.12a.186.186 0 00.185-.186V3.574a.186.186 0 00-.185-.185h-2.12a.185.185 0 00-.185.185v1.888c0 .102.083.186.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V3.574a.186.186 0 00-.185-.185h-2.119a.185.185 0 00-.186.185v1.888c0 .102.084.186.186.186m5.893 2.715h2.119a.186.186 0 00.186-.185V6.29a.186.186 0 00-.186-.185h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.93 0h2.12a.186.186 0 00.185-.185V6.29a.186.186 0 00-.185-.185h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.184.185m-2.964 0h2.119a.186.186 0 00.185-.185V6.29a.186.186 0 00-.185-.185h-2.119a.185.185 0 00-.186.185v1.888c0 .102.084.185.186.185m-2.929 0h2.12a.186.186 0 00.186-.185V6.29a.186.186 0 00-.186-.185h-2.12a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m2.929 2.715h2.119a.186.186 0 00.186-.186V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.888c0 .102.083.186.185.186m-2.93 0h2.12a.186.186 0 00.185-.186V9.006a.186.186 0 00-.185-.186h-2.12a.185.185 0 00-.184.186v1.888c0 .102.083.186.184.186m-2.964 0h2.119a.186.186 0 00.185-.186V9.006a.186.186 0 00-.185-.186h-2.119a.185.185 0 00-.186.186v1.888c0 .102.084.186.186.186m-2.929 0h2.12a.186.186 0 00.186-.186V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.888c0 .102.083.186.185.186m0 5.337h15.932c.594 0 1.076-.482 1.076-1.076V11.96H.664v3.383c0 .594.482 1.076 1.076 1.076" /></svg>
+        <h2 class="text-2xl font-bold text-white mb-4 flex flex-col md:flex-row items-center md:justify-start gap-2 text-center md:text-left">
+          <svg class="w-8 h-8 md:mr-3 text-blue-500" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.119a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.186.185.186m-2.93 0h2.12a.186.186 0 00.185-.186V3.574a.186.186 0 00-.185-.185h-2.12a.185.185 0 00-.185.185v1.888c0 .102.083.186.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V3.574a.186.186 0 00-.185-.185h-2.119a.185.185 0 00-.186.185v1.888c0 .102.084.186.186.186m5.893 2.715h2.119a.186.186 0 00.186-.185V6.29a.186.186 0 00-.186-.185h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.93 0h2.12a.186.186 0 00.185-.185V6.29a.186.186 0 00-.185-.185h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.184.185m-2.964 0h2.119a.186.186 0 00.185-.185V6.29a.186.186 0 00-.185-.185h-2.119a.185.185 0 00-.186.185v1.888c0 .102.084.185.186.185m-2.929 0h2.12a.186.186 0 00.186-.185V6.29a.186.186 0 00-.186-.185h-2.12a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m2.929 2.715h2.119a.186.186 0 00.186-.186V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.888c0 .102.083.186.185.186m-2.93 0h2.12a.186.186 0 00.185-.186V9.006a.186.186 0 00-.185-.186h-2.12a.185.185 0 00-.184.186v1.888c0 .102.083.186.184.186m-2.964 0h2.119a.186.186 0 00.185-.186V9.006a.186.186 0 00-.185-.186h-2.119a.185.185 0 00-.186.186v1.888c0 .102.084.186.186.186m-2.929 0h2.12a.186.186 0 00.186-.186V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.888c0 .102.083.186.185.186m0 5.337h15.932c.594 0 1.076-.482 1.076-1.076V11.96H.664v3.383c0 .594.482 1.076 1.076 1.076" /></svg>
           Install the Latest Version of Docker
         </h2>
-        <div class="prose prose-invert prose-sm text-slate-300">
+        <div class="prose prose-invert prose-sm text-slate-300 transform md:text-left text-center">
           <p>We recommend installing the latest version of Docker using the official repository.</p>
           
           <div class="mb-4">
             <p class="font-bold text-white mb-2">1. Set up Docker's apt repository.</p>
-            <pre class="bg-black/50 p-4 rounded-lg overflow-x-auto"><code># Add Docker's official GPG key:
+            <pre class="bg-black/50 p-4 rounded-lg whitespace-pre-wrap break-all text-left"><code># Add Docker's official GPG key:
 sudo apt update
 sudo apt install ca-certificates curl
 sudo install -m 0755 -d /etc/apt/keyrings
@@ -55,11 +55,11 @@ sudo apt update</code></pre>
           <div class="mb-4">
              <p class="font-bold text-white mb-2">2. Install the Docker packages.</p>
              <p class="text-xs mb-2 text-slate-400">This will install the latest version of Docker.</p>
-             <pre class="bg-black/50 p-4 rounded-lg overflow-x-auto"><code>sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</code></pre>
+             <pre class="bg-black/50 p-4 rounded-lg whitespace-pre-wrap break-all text-left"><code>sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin</code></pre>
           </div>
 
           <p>Don't forget to add your user to the docker group so you don't need sudo for every command:</p>
-          <pre class="bg-black/50 p-4 rounded-lg">sudo usermod -aG docker $USER</pre>
+          <pre class="bg-black/50 p-4 rounded-lg whitespace-pre-wrap break-all text-left">sudo usermod -aG docker $USER</pre>
           <p><em>Log out and log back in for this to take effect.</em></p>
         </div>
       </section>
