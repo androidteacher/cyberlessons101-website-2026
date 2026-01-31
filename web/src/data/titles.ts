@@ -37,7 +37,7 @@ export const titleMapping: Record<string, string> = {
     "flag-red57": "NextJS CVE (Red57)",
     "flag-red58": "Ghost Symlink (Red58)",
     "front-end-bypass-challenge": "Frontend Bypass",
-    "git-challenge": "Git Challenge",
+
     "js_ctf_container": "JS Number Guessing",
     "js_flag": "JS Flag",
     "magic_method_container": "Magic Methods",

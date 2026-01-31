@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About this Site">
+  <div class="max-w-4xl mx-auto space-y-12">
+    
+    <!-- Introduction -->
+    <header class="text-center mb-10 border-b border-white/10 pb-10">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white text-center">About This Site</h1>
+      <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+        Whether you are leading a classroom or studying solo, these Docker-based challenges provide a streamlined way to engage with real-world exploitation.
+      </p>
+    </header>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Mentors & Educators -->
+      <section class="cyber-card p-8 h-full">
+        <h2 class="text-2xl font-bold text-cyber-secondary mb-4 flex items-center gap-2">
+          For Mentors & Educators
+        </h2>
+        <p class="text-slate-400 leading-relaxed">
+          Instantly spin up a lab environment without the headache. Pair these containers with a scoreboard to host competitive, engaging CTFs for your students in minutes.
+        </p>
+      </section>
+
+      <!-- Independent Learners -->
+      <section class="cyber-card p-8 h-full">
+        <h2 class="text-2xl font-bold text-cyber-primary mb-4 flex items-center gap-2">
+          For Independent Learners
+        </h2>
+        <p class="text-slate-400 leading-relaxed">
+          Level up your skill set from home for free. Every challenge includes step-by-step guides designed to take you from initial access to full exploitation.
+        </p>
+      </section>
+    </div>
+
+    <!-- Easy Setup & Solution Guide -->
+    <div class="space-y-6">
+      
+      <section class="cyber-card p-8">
+        <h2 class="text-2xl font-bold text-white mb-4">Easy Setup</h2>
+        <p class="text-slate-300 text-lg">
+          If you can run <code class="bg-black/50 px-2 py-1 rounded text-cyber-primary font-mono text-base">sudo apt install docker.io</code> on an x86_64 Ubuntu VM, you’re ready to go.
+        </p>
+      </section>
+
+      <section class="cyber-card p-8 border-yellow-500/20 bg-yellow-900/5">
+        <h3 class="text-xl font-bold text-yellow-400 mb-3 flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Solution Guide Note
+        </h3>
+        <p class="text-slate-300 leading-relaxed">
+          My solution guides frequently use the placeholder IP address <span class="bg-black/40 px-2 py-0.5 rounded text-yellow-200 font-mono">172.25.200.200</span>. When following along, simply swap this out with the actual IP address of your Ubuntu VM.
+        </p>
+      </section>
+
+    </div>
+
+  </div>
+</Layout>
