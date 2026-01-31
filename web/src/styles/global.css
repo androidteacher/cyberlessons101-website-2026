@@ -13,7 +13,7 @@
 }
 
 .cyber-card {
-  @apply bg-cyber-surface border border-slate-700/50 rounded-xl overflow-hidden transition-all duration-300 w-full max-w-lg mx-auto;
+  @apply bg-cyber-surface border border-slate-700/50 rounded-xl overflow-hidden transition-all duration-300 w-[90%] md:w-full max-w-lg mx-auto;
 }
 
 .cyber-card:hover {
