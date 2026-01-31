@@ -35,7 +35,7 @@ const challenges = ctfData.filter(item => item.type === 'challenge');
     </div>
   </header>
 
-  <div id="challenges-grid" class="flex flex-col items-center w-full gap-6 md:grid md:grid-cols-2 lg:grid-cols-3 md:items-stretch">
+  <div id="challenges-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     {challenges.map((challenge) => (
       <ChallengeCard challenge={challenge} />
     ))}
