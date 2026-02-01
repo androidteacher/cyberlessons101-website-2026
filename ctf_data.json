@@ -351,6 +351,7 @@
     "description": "",
     "full_description": "",
     "solution_url": null,
+    "category": null,
     "hub_url": "https://hub.docker.com/r/joshbeck2024/git-challenge"
   },
   {
