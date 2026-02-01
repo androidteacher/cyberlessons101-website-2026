@@ -1,6 +1,20 @@
 [
   {
     "type": "challenge",
+    "command": "docker run -d -p 9050:80 --name flag-red69 --restart always joshbeck2024/ctf-cve-2024-51793-flag-red69",
+    "name": "flag-red69",
+    "image": "joshbeck2024/ctf-cve-2024-51793-flag-red69",
+    "ports": [
+      "9050:80"
+    ],
+    "description": "CTF Activity: CVE-2024-51793 (Wordpress). Black Box This Time. Solution Guide Release TBA",
+    "full_description": "docker run -d -p 9050:80 --name flag-red69 --restart always joshbeck2024/ctf-cve-2024-51793-flag-red69\n\nSolution Guide: Not Published",
+    "solution_url": "/blackbox",
+    "category": null,
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-cve-2024-51793-flag-red69"
+  },
+  {
+    "type": "challenge",
     "command": "docker run -d --restart always -p 9048:3000 --name flag-red68 joshbeck2024/ctf-javascript-challenge-red68",
     "name": "flag-red68",
     "image": "joshbeck2024/ctf-javascript-challenge-red68",
@@ -339,6 +353,20 @@
     "full_description": "docker run -d \\\n  --name numberizer \\\n  --restart unless-stopped \\\n  -p 9007:80 \\\n  joshbeck2024/numberizer:latest\n\nYou should provide the index.php source code to participants.\n\nSolution Guide: https://www.notion.so/Numberizer-2e34c8e5237680edbe30ef41557e9523?source=copy_link\n\n",
     "solution_url": "https://www.notion.so/Numberizer-2e34c8e5237680edbe30ef41557e9523?source=copy_link",
     "hub_url": "https://hub.docker.com/r/joshbeck2024/numberizer"
+  },
+  {
+    "type": "challenge",
+    "command": "docker run -d --name git-challenge -p 9030:80 --restart always joshbeck2024/git-challenge",
+    "name": "git-challenge",
+    "image": "joshbeck2024/git-challenge",
+    "ports": [
+      "9030:80"
+    ],
+    "description": "",
+    "full_description": "",
+    "solution_url": null,
+    "category": null,
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/git-challenge"
   },
   {
     "type": "challenge",

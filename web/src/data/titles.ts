@@ -71,5 +71,6 @@ export const titleMapping: Record<string, string> = {
     "flag-red63": "WPQuery Exploit: CVE-2024-50498",
     "flag-red64": "PHP Serialization Basics",
     "Flag-red65-67": "PHP Serialization Part 2 (Magic Methods)",
-    "flag-red68": "Loot Box"
+    "flag-red68": "Loot Box",
+    "flag-red69": "Repair Shop"
 };
