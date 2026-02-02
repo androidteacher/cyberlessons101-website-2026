@@ -1,6 +1,20 @@
 [
   {
     "type": "challenge",
+    "command": "docker run -d --restart always --name flag-red70 -p 9051:80 joshbeck2024/ctf-php-filter-chain-lesson-flag-red70:latest",
+    "name": "flag-red70",
+    "image": "joshbeck2024/ctf-php-filter-chain-lesson-flag-red70:latest",
+    "ports": [
+      "9051:80"
+    ],
+    "description": "CTF Activity/Lesson: Understanding PHP Filter Chains. Solution Guide Included",
+    "full_description": "docker run -d --restart always --name flag-red70 -p 9051:80 joshbeck2024/ctf-php-filter-chain-lesson-flag-red70:latest\n\nSolution Guide: https://humble-raptor-f30.notion.site/Red70-PHP-Filter-Chain-Lesson-2fa4c8e523768061bc1dfc42e70737b9?source=copy_link",
+    "solution_url": "https://humble-raptor-f30.notion.site/Red70-PHP-Filter-Chain-Lesson-2fa4c8e523768061bc1dfc42e70737b9?source=copy_link",
+    "category": null,
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-php-filter-chain-lesson-flag-red70"
+  },
+  {
+    "type": "challenge",
     "command": "docker run -d -p 9050:80 --name flag-red69 --restart always joshbeck2024/ctf-cve-2024-51793-flag-red69",
     "name": "flag-red69",
     "image": "joshbeck2024/ctf-cve-2024-51793-flag-red69",
