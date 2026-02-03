@@ -26,6 +26,11 @@ const displayTitle = titleMapping[challenge.name] || challenge.name.replace(/[-_
       <span class="absolute inset-0" aria-hidden="true"></span>
       {displayTitle}
     </a>
+    {challenge.cve && (
+      <div class="text-xs text-slate-500 font-normal mt-1 text-center md:text-left">
+        {challenge.cve}
+      </div>
+    )}
   </h2>
   
   <p class="text-slate-400 text-sm mb-6 flex-grow text-center md:text-left">

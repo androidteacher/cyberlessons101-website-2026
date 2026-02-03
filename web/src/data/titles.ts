@@ -73,5 +73,6 @@ export const titleMapping: Record<string, string> = {
     "flag-red64": "PHP Serialization Basics",
     "Flag-red65-67": "PHP Serialization Part 2 (Magic Methods)",
     "flag-red68": "Loot Box",
-    "flag-red69": "Repair Shop"
+    "flag-red69": "Repair Shop",
+    "flag-red71": "Next.js Deep Dive",
 };

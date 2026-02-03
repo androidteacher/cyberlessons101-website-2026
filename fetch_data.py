@@ -138,7 +138,7 @@ for line in lines:
     })
 
 # Load existing data to preserve manual edits
-CTF_JSON_PATH = '/home/josh/Antigrav_projects/website_test/web/src/data/ctf.json'
+CTF_JSON_PATH = './web/src/data/ctf.json'
 try:
     with open(CTF_JSON_PATH, 'r') as f:
         existing_data = json.load(f)
@@ -225,7 +225,7 @@ for item in challenges:
 
 # Output to json file
 # Write back to both locations to be safe/consistent
-with open('/home/josh/Antigrav_projects/website_test/ctf_data.json', 'w') as f:
+with open('./ctf_data.json', 'w') as f:
     json.dump(results, f, indent=2)
 
 with open(CTF_JSON_PATH, 'w') as f:

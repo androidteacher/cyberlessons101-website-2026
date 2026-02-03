@@ -1,6 +1,21 @@
 [
   {
     "type": "challenge",
+    "command": "docker run -d --name flag-red71 --restart always -p 9052:80 joshbeck2024/ctf-nextjs-deep-dive-flag-red71",
+    "name": "flag-red71",
+    "image": "joshbeck2024/ctf-nextjs-deep-dive-flag-red71",
+    "ports": [
+      "9052:80"
+    ],
+    "description": "Solution Guide Included",
+    "cve": "CVE-2025-29927",
+    "full_description": "docker run -d --name flag-red71 --restart always -p 9052:80 joshbeck2024/ctf-nextjs-deep-dive-flag-red71\n\nSolution Guide: https://www.notion.so/Red71-CVE-2025-29927-Next-js-Deep-Dive-2fb4c8e5237680179421c52e9673a5e5?source=copy_link",
+    "solution_url": "https://www.notion.so/Red71-CVE-2025-29927-Next-js-Deep-Dive-2fb4c8e5237680179421c52e9673a5e5?source=copy_link",
+    "category": null,
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-nextjs-deep-dive-flag-red71"
+  },
+  {
+    "type": "challenge",
     "command": "docker run -d --restart always --name flag-red70 -p 9051:80 joshbeck2024/ctf-php-filter-chain-lesson-flag-red70:latest",
     "name": "flag-red70",
     "image": "joshbeck2024/ctf-php-filter-chain-lesson-flag-red70:latest",
