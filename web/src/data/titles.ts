@@ -32,7 +32,7 @@ export const titleMapping: Record<string, string> = {
     "ctf-ascii-rev": "ASCII Reverse",
     "ctf-json-post": "JSON POST Challenge",
     "ctf-minecraft": "Minecraft API Fuzzing",
-    "ctf-php-filter": "PHP Filter Chain",
+    "ctf-php-filter": "Simple PHP Filter",
     "ctf-redirection": "Redirection Challenge",
     "ctf-revshell": "Reverse Shell",
     "flag-red57": "NextJS CVE (Red57)",
