@@ -307,9 +307,9 @@
   },
   {
     "type": "challenge",
-    "command": "docker run -d --name sql-web -p 5000:5000 joshbeck2024/sql-injection-chal-package-search:tagname",
+    "command": "docker run -d --name sql-web -p 5000:5000 joshbeck2024/sql-injection-chal-package-search:latest",
     "name": "sql-web",
-    "image": "joshbeck2024/sql-injection-chal-package-search:tagname",
+    "image": "joshbeck2024/sql-injection-chal-package-search:latest",
     "ports": [
       "5000:5000"
     ],

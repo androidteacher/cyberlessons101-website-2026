@@ -75,4 +75,5 @@ export const titleMapping: Record<string, string> = {
     "flag-red68": "Loot Box",
     "flag-red69": "Repair Shop",
     "flag-red71": "Next.js Deep Dive",
+    "flag-red6": "LInux PAM Exploit",
 };
