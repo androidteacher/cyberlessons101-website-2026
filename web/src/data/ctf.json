@@ -537,7 +537,7 @@
     ],
     "description": "Can you guess the correct number and reveal the flag?",
     "full_description": "docker run -d -p 9035:9040 --restart always --name js_ctf_container joshbeck2024/ctf_javascript_number_guessing\n\nJust read the javascript and you'll see that a different secret number is embedded each time. Easy peasy!\n\n",
-    "solution_url": null,
+    "solution_url": "/blackbox",
     "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf_javascript_number_guessing"
   },
   {
@@ -555,21 +555,21 @@
   },
   {
     "type": "challenge",
-    "command": "docker run -d -p 9055:80 --restart always --name ctf-revshell joshbeck2024/ctf-rev-shell-mime=type",
+    "command": "docker run -d -p 9055:80 --restart always --name ctf-revshell joshbeck2024/ctf-rev-shell-mime-type",
     "name": "ctf-revshell",
-    "image": "joshbeck2024/ctf-rev-shell-mime=type",
+    "image": "joshbeck2024/ctf-rev-shell-mime-type",
     "ports": [
       "9055:80"
     ],
-    "description": "",
-    "full_description": "",
-    "solution_url": null,
-    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-rev-shell-mime=type"
+    "description": "CTF Activity: Can you establish a reverse shell?",
+    "full_description": "docker run -d -p 9055:80 --restart always --name ctf-revshell joshbeck2024/ctf-rev-shell-mime-type\n\nSolution Guide: https://www.notion.so/Revshell-at-the-Disco-2e74c8e5237680e48252ed8a74810ce7?source=copy_link\n",
+    "solution_url": "https://www.notion.so/Revshell-at-the-Disco-2e74c8e5237680e48252ed8a74810ce7?source=copy_link",
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-rev-shell-mime-type"
   },
   {
     "type": "challenge",
     "command": "docker run -p 9066:3000 -d --restart always joshbeck2024/ctf-prototype-pollution",
-    "name": "simple-xss",
+    "name": "prototype-pollution",
     "image": "joshbeck2024/ctf-prototype-pollution",
     "ports": [
       "9066:3000"

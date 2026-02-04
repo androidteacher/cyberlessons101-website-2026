@@ -56,7 +56,7 @@ export const titleMapping: Record<string, string> = {
     "xxe-challenge": "OOB XXE",
     "zipslip": "Zip Slip",
     "add-them-up": "Add Them Up",
-    "simple-xss": "Simple XSS",
+    "prototype-pollution": "Prototype Pollution",
     "wireshark-login": "Wireshark",
     "xss-admin-bot": "Stored XSS (Admin Bot)",
     "flag-red22": "Har Har Hijack",
