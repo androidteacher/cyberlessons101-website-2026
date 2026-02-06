@@ -1,6 +1,20 @@
 [
   {
     "type": "challenge",
+    "command": "docker run -d --restart always --name flag-red72 -p 8080:8080 joshbeck2024/ctf-tomcat-mgr-war-upload-flag-red72",
+    "name": "flag-red72",
+    "image": "joshbeck2024/ctf-tomcat-mgr-war-upload-flag-red72",
+    "ports": [
+      "8080:8080"
+    ],
+    "description": "",
+    "full_description": "docker run -d --restart always --name flag-red72 -p 8080:8080 joshbeck2024/ctf-tomcat-mgr-war-upload-flag-red72\n\nSolution Guide: https://www.notion.so/Red72-This-is-War-2fe4c8e5237680af9fefe74dd98a8954?source=copy_link\n",
+    "solution_url": "https://www.notion.so/Red72-This-is-War-2fe4c8e5237680af9fefe74dd98a8954?source=copy_link",
+    "category": null,
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-tomcat-mgr-war-upload-flag-red72"
+  },
+  {
+    "type": "challenge",
     "command": "docker run -d --name flag-red71 --restart always -p 9052:80 joshbeck2024/ctf-nextjs-deep-dive-flag-red71",
     "name": "flag-red71",
     "image": "joshbeck2024/ctf-nextjs-deep-dive-flag-red71",
@@ -307,15 +321,16 @@
   },
   {
     "type": "challenge",
-    "command": "docker run -d --name sql-web -p 5000:5000 joshbeck2024/sql-injection-chal-package-search:latest",
+    "command": "docker run -d --name sql-web -p 5000:5000 joshbeck2024/sql-injection-chal-package-search:tagname",
     "name": "sql-web",
-    "image": "joshbeck2024/sql-injection-chal-package-search:latest",
+    "image": "joshbeck2024/sql-injection-chal-package-search:tagname",
     "ports": [
       "5000:5000"
     ],
     "description": "This is an sql injection challenge. ",
     "full_description": "This is a CTF SQL injection challenge.\n\ndocker run -d \\ <br>\n  --name sql-web \\ <br>\n  -p 5000:5000 \\ <br>\n  joshbeck2024/sql-injection-chal-package-search:latest\n\nSolution Guide: https://www.notion.so/SQL-Package-Search-2e24c8e5237680959e9bc8896a6820c8?source=copy_link\n",
     "solution_url": "https://www.notion.so/SQL-Package-Search-2e24c8e5237680959e9bc8896a6820c8?source=copy_link",
+    "category": null,
     "hub_url": "https://hub.docker.com/r/joshbeck2024/sql-injection-chal-package-search"
   },
   {
@@ -555,16 +570,17 @@
   },
   {
     "type": "challenge",
-    "command": "docker run -d -p 9055:80 --restart always --name ctf-revshell joshbeck2024/ctf-rev-shell-mime-type",
+    "command": "docker run -d -p 9055:80 --restart always --name ctf-revshell joshbeck2024/ctf-rev-shell-mime=type",
     "name": "ctf-revshell",
-    "image": "joshbeck2024/ctf-rev-shell-mime-type",
+    "image": "joshbeck2024/ctf-rev-shell-mime=type",
     "ports": [
       "9055:80"
     ],
-    "description": "CTF Activity: Can you establish a reverse shell?",
-    "full_description": "docker run -d -p 9055:80 --restart always --name ctf-revshell joshbeck2024/ctf-rev-shell-mime-type\n\nSolution Guide: https://www.notion.so/Revshell-at-the-Disco-2e74c8e5237680e48252ed8a74810ce7?source=copy_link\n",
-    "solution_url": "https://www.notion.so/Revshell-at-the-Disco-2e74c8e5237680e48252ed8a74810ce7?source=copy_link",
-    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-rev-shell-mime-type"
+    "description": "",
+    "full_description": "",
+    "solution_url": null,
+    "category": null,
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-rev-shell-mime=type"
   },
   {
     "type": "challenge",

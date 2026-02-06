@@ -1,4 +1,5 @@
 export const titleMapping: Record<string, string> = {
+    "flag-red72": "This is War!",
     "flag-red70": "PHP Filter Chain Lesson (Advanced Topic)",
     "flag-b": "Reverse Shell Lab",
     "ctf-mime-challenge-flag-n": "MIME Type Bypass Lab",

@@ -1,13 +1,28 @@
 [
   {
     "type": "challenge",
+    "command": "docker run -d --restart always --name flag-red72 -p 8080:8080 joshbeck2024/ctf-tomcat-mgr-war-upload-flag-red72",
+    "name": "flag-red72",
+    "image": "joshbeck2024/ctf-tomcat-mgr-war-upload-flag-red72",
+    "ports": [
+      "8080:8080"
+    ],
+    "description": "",
+    "full_description": "docker run -d --restart always --name flag-red72 -p 8080:8080 joshbeck2024/ctf-tomcat-mgr-war-upload-flag-red72\n\nSolution Guide: https://www.notion.so/Red72-This-is-War-2fe4c8e5237680af9fefe74dd98a8954?source=copy_link\n",
+    "solution_url": "https://www.notion.so/Red72-This-is-War-2fe4c8e5237680af9fefe74dd98a8954?source=copy_link",
+    "category": null,
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-tomcat-mgr-war-upload-flag-red72"
+  },
+  {
+    "type": "challenge",
     "command": "docker run -d --name flag-red71 --restart always -p 9052:80 joshbeck2024/ctf-nextjs-deep-dive-flag-red71",
     "name": "flag-red71",
     "image": "joshbeck2024/ctf-nextjs-deep-dive-flag-red71",
     "ports": [
       "9052:80"
     ],
-    "description": "Next.js Deep Dive (CVE-2025-29927)",
+    "description": "Solution Guide Included",
+    "cve": "CVE-2025-29927",
     "full_description": "docker run -d --name flag-red71 --restart always -p 9052:80 joshbeck2024/ctf-nextjs-deep-dive-flag-red71\n\nSolution Guide: https://www.notion.so/Red71-CVE-2025-29927-Next-js-Deep-Dive-2fb4c8e5237680179421c52e9673a5e5?source=copy_link",
     "solution_url": "https://www.notion.so/Red71-CVE-2025-29927-Next-js-Deep-Dive-2fb4c8e5237680179421c52e9673a5e5?source=copy_link",
     "category": null,
@@ -315,6 +330,7 @@
     "description": "This is an sql injection challenge. ",
     "full_description": "This is a CTF SQL injection challenge.\n\ndocker run -d \\ <br>\n  --name sql-web \\ <br>\n  -p 5000:5000 \\ <br>\n  joshbeck2024/sql-injection-chal-package-search:latest\n\nSolution Guide: https://www.notion.so/SQL-Package-Search-2e24c8e5237680959e9bc8896a6820c8?source=copy_link\n",
     "solution_url": "https://www.notion.so/SQL-Package-Search-2e24c8e5237680959e9bc8896a6820c8?source=copy_link",
+    "category": null,
     "hub_url": "https://hub.docker.com/r/joshbeck2024/sql-injection-chal-package-search"
   },
   {
@@ -536,7 +552,7 @@
     ],
     "description": "Can you guess the correct number and reveal the flag?",
     "full_description": "docker run -d -p 9035:9040 --restart always --name js_ctf_container joshbeck2024/ctf_javascript_number_guessing\n\nJust read the javascript and you'll see that a different secret number is embedded each time. Easy peasy!\n\n",
-    "solution_url": null,
+    "solution_url": "/blackbox",
     "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf_javascript_number_guessing"
   },
   {
@@ -563,12 +579,13 @@
     "description": "",
     "full_description": "",
     "solution_url": null,
+    "category": null,
     "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-rev-shell-mime=type"
   },
   {
     "type": "challenge",
     "command": "docker run -p 9066:3000 -d --restart always joshbeck2024/ctf-prototype-pollution",
-    "name": "simple-xss",
+    "name": "prototype-pollution",
     "image": "joshbeck2024/ctf-prototype-pollution",
     "ports": [
       "9066:3000"
@@ -1012,6 +1029,7 @@
     "description": "CTF Training: Use Burp Suite to modify a GET request to a POST request. Directions Included.",
     "full_description": "docker run -d -p 9017:80 --restart always --name flag_l_container joshbeck2024/ctf-get-post-training-flag-l\n\nSolution Guide: https://humble-raptor-f30.notion.site/L-Get-Versus-Post-7058c6a8717b4dbba10f35e490cd22d7?source=copy_link",
     "solution_url": "https://humble-raptor-f30.notion.site/L-Get-Versus-Post-7058c6a8717b4dbba10f35e490cd22d7?source=copy_link",
+    "category": "Easy",
     "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-get-post-training-flag-l"
   },
   {
@@ -1052,6 +1070,7 @@
     "description": "CTF: SSRF Bypass using Hexadecimal to bypass an IP filter. Directions included.",
     "full_description": "docker run -d -p 9020:80 --restart always --name flag-q joshbeck2024/ctf-ssrf-hex-bypass-flag-q\n\nSolution Guide: https://humble-raptor-f30.notion.site/q-SSRF-Hex-064ee0d604754a00b4156fec158da600?source=copy_link\n",
     "solution_url": "https://humble-raptor-f30.notion.site/q-SSRF-Hex-064ee0d604754a00b4156fec158da600?source=copy_link",
+    "category": "Easy",
     "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-ssrf-hex-bypass-flag-q"
   },
   {
