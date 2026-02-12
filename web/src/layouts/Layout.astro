@@ -55,6 +55,24 @@ const { title } = Astro.props;
             </div>
           </div>
 
+
+          <!-- Dropdown for Blockchain -->
+          <div class="relative group">
+            <button class="flex items-center gap-1 hover:text-cyber-primary transition-colors focus:outline-none py-4">
+              Lesson Plans
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <!-- Dropdown Menu -->
+            <div class="absolute left-0 mt-0 w-96 bg-cyber-darker border border-white/10 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left z-50">
+              <div class="py-1">
+                <a href="https://www.notion.so/Blockchain-in-a-Box-Dockerized-Crypto-Nodes-for-the-Classroom-3024c8e52376808c9fa8dddcce5dddd5" target="_blank" class="block px-4 py-2 hover:bg-cyber-surface hover:text-cyber-primary transition-colors">Blockchain in a Box (Crypto Node Lesson)</a>
+                <a href="https://humble-raptor-f30.notion.site/Yara_Rules-b58354d7282d47c7a1598e34fd089d1f?source=copy_link" target="_blank" class="block px-4 py-2 hover:bg-cyber-surface hover:text-cyber-primary transition-colors">Working with Yara</a>
+              </div>
+            </div>
+          </div>
+
           <!-- Dropdown for Setup Docker -->
           <div class="relative group">
             <button class="flex items-center gap-1 hover:text-cyber-primary transition-colors focus:outline-none py-4">
