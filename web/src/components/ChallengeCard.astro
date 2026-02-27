@@ -4,6 +4,7 @@ import { titleMapping } from '../data/titles';
 const { challenge, class: className } = Astro.props;
 
 const displayTitle = titleMapping[challenge.name] || challenge.name.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+const displayByline = challenge.name.replace(/[-_]/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 ---
 
 <article class:list={["cyber-card p-6 flex flex-col h-full group relative challenge-card", className]} data-title={displayTitle.toLowerCase()} data-name={challenge.name.toLowerCase()}>
@@ -17,7 +18,7 @@ const displayTitle = titleMapping[challenge.name] || challenge.name.replace(/[-_
        </svg>
     </div>
     <span class="text-xs font-mono text-slate-500 bg-black/30 px-2 py-1 rounded">
-      {challenge.name}
+      {displayByline}
     </span>
   </div>
 

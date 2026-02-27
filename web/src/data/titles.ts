@@ -1,4 +1,5 @@
 export const titleMapping: Record<string, string> = {
+    "flag-red73": "CVE-2025-11582 (React2Shell)",
     "flag-red72": "This is War!",
     "flag-red70": "PHP Filter Chain Lesson (Advanced Topic)",
     "flag-b": "Reverse Shell Lab",

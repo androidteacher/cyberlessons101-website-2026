@@ -1,6 +1,20 @@
 [
   {
     "type": "challenge",
+    "command": "docker run -d --name flag-red73 --restart always -p 10001:3000 joshbeck2024/ctf-react-cve-2025-55182",
+    "name": "flag-red73",
+    "image": "joshbeck2024/ctf-react-cve-2025-55182",
+    "ports": [
+      "10001:3000"
+    ],
+    "description": "Flag Red73",
+    "full_description": "docker run -d --name flag-red73 --restart always -p 10001:3000 joshbeck2024/ctf-react-cve-2025-55182\n\nSolution Guide: https://humble-raptor-f30.notion.site/Red-73-React-CVE-2025-55182-71621f2f77be4aaeb3b4f52ba1fb2918?source=copy_link",
+    "solution_url": "https://humble-raptor-f30.notion.site/Red-73-React-CVE-2025-55182-71621f2f77be4aaeb3b4f52ba1fb2918?source=copy_link",
+    "category": null,
+    "hub_url": "https://hub.docker.com/r/joshbeck2024/ctf-react-cve-2025-55182"
+  },
+  {
+    "type": "challenge",
     "command": "docker run -d --restart always --name flag-red72 -p 8080:8080 joshbeck2024/ctf-tomcat-mgr-war-upload-flag-red72",
     "name": "flag-red72",
     "image": "joshbeck2024/ctf-tomcat-mgr-war-upload-flag-red72",
